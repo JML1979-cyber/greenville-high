@@ -1,0 +1,177 @@
+[
+  {
+    "id": "follow-extended-kraft-01", "path": "extended", "reihenfolge": 1,
+    "titel": "Kraftwirkung am Versuchswagen", "story": "Auf einer Notiz steht: Der Wagen bewegt sich nach rechts. Während der Messung wirkt eine Kraft nach links. Der Wagen bewegt sich weiter nach rechts, wird aber langsamer.",
+    "aufgabe": "Welche Aussage beschreibt die wirkende Kraft richtig?",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "entgegen-bewegung", "text": "Sie wirkt entgegen der Bewegungsrichtung und verringert die Geschwindigkeit." },
+      { "id": "in-bewegung", "text": "Sie wirkt in Bewegungsrichtung und erhält die Geschwindigkeit." },
+      { "id": "keine-kraft", "text": "Es wirkt keine resultierende Kraft, weil der Wagen seine Bewegungsrichtung beibehält." },
+      { "id": "nur-nach-unten", "text": "Die resultierende Kraft wirkt ausschließlich nach unten." }
+    ],
+    "lösung": { "richtigeAntwort": "entgegen-bewegung", "begründung": "Die Bremswirkung entgegen der Bewegung verringert die Geschwindigkeit.", "erwartungshorizont": "Kraftrichtung und Geschwindigkeitsänderung werden gemeinsam berücksichtigt." },
+    "thema": "Mechanik – Kraft", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Kraftwirkung und Geschwindigkeitsänderung in einer Alltagssituation verknüpfen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Kräfte als Ursache von Bewegungsänderungen beschreiben" },
+    "kompetenztags": ["mechanik", "kraft", "bewegungsaenderung"], "diagnosetags": ["resultierende-kraft", "kraftrichtung"],
+    "fehlvorstellungen": [{ "id": "richtung-gleich-keine-kraft", "beschreibung": "Nur eine Richtungsänderung wird als Kraftwirkung verstanden." }],
+    "förderhinweise": ["Geschwindigkeitsbetrag und Bewegungsrichtung getrennt betrachten."]
+  },
+  {
+    "id": "follow-extended-geschwindigkeit-02", "path": "extended", "reihenfolge": 2,
+    "titel": "Zwei Messabschnitte", "story": "Für den Versuchswagen sind zwei Abschnitte notiert: Abschnitt A: Weg 1 m, Zeit 0,1 s. Abschnitt B: Weg 2 m, Zeit 0,2 s.",
+    "aufgabe": "Wie groß war die mittlere Geschwindigkeit über die gesamte Messstrecke?",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "zehn", "text": "10 m/s" }, { "id": "fuenfzehn", "text": "15 m/s" },
+      { "id": "dreissig", "text": "30 m/s" }, { "id": "hundert", "text": "100 m/s" }
+    ],
+    "lösung": { "richtigeAntwort": "zehn", "begründung": "Gesamtweg 3 m geteilt durch Gesamtzeit 0,3 s ergibt 10 m/s.", "erwartungshorizont": "Zuerst werden Wege und Zeiten addiert, danach wird der Quotient gebildet." },
+    "thema": "Mechanik – Bewegung", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Eine mittlere Geschwindigkeit aus Gesamtweg und Gesamtzeit bestimmen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Bewegungen quantitativ auswerten" },
+    "kompetenztags": ["mechanik", "geschwindigkeit", "mehrschrittige-berechnung"], "diagnosetags": ["gesamtweg", "gesamtzeit"],
+    "fehlvorstellungen": [{ "id": "einzelwerte-addiert", "beschreibung": "Einzelgeschwindigkeiten oder ungeeignete Größen werden addiert." }],
+    "förderhinweise": ["Gesamtweg und Gesamtzeit vor der Division jeweils getrennt bestimmen."]
+  },
+  {
+    "id": "follow-extended-traegheit-03", "path": "extended", "reihenfolge": 3,
+    "titel": "Trägheit aus zwei Perspektiven", "story": "Der Versuchswagen bewegt sich vorwärts und wird plötzlich gestoppt. Der lose Kunststoffblock bewegt sich zunächst weiter nach vorne.",
+    "aufgabe": "Welche Beschreibung berücksichtigt die Beobachtung aus Sicht des Wagens und aus Sicht des Raumes richtig?",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "relativ", "text": "Gegenüber dem Raum bewegt sich der Körper zunächst weiter. Gegenüber dem langsamer werdenden Wagen bewegt er sich dadurch nach vorne." },
+      { "id": "aktive-kraft", "text": "Gegenüber beiden entsteht eine neue Kraft, die den Körper nach vorne beschleunigt." },
+      { "id": "steht-bahnsteig", "text": "Gegenüber dem Raum bleibt der Körper sofort stehen; nur der Wagen bewegt sich weiter." },
+      { "id": "zug-schiebt", "text": "Der Wagen schiebt den Körper aus beiden Perspektiven nach vorne." }
+    ],
+    "lösung": { "richtigeAntwort": "relativ", "begründung": "Der Körper behält zunächst seine Bewegung gegenüber dem Raum bei und bewegt sich relativ zum bremsenden Wagen nach vorne.", "erwartungshorizont": "Trägheit und Bezugssystem werden gemeinsam verwendet." },
+    "thema": "Mechanik – Trägheit", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Ein Trägheitsphänomen aus zwei Bezugssystemen beschreiben.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Bewegungen bezugssystemabhängig beschreiben" },
+    "kompetenztags": ["mechanik", "traegheit", "bezugssystem"], "diagnosetags": ["relativbewegung"],
+    "fehlvorstellungen": [{ "id": "scheinkraft-als-vorwaertskraft", "beschreibung": "Eine reale zusätzliche Vorwärtskraft wird angenommen." }],
+    "förderhinweise": ["Position und Geschwindigkeit getrennt aus Zug- und Bodenperspektive beschreiben."]
+  },
+  {
+    "id": "follow-extended-messgeraete-04", "path": "extended", "reihenfolge": 4,
+    "titel": "Messgeräte an der Lampe", "story": "Im Aufbau sollen gleichzeitig die Stromstärke durch die Lampe und die Spannung an der Lampe gemessen werden.",
+    "aufgabe": "Wie müssen die Messgeräte angeschlossen werden? Wähle alle richtigen Antworten aus.",
+    "antworttyp": "multiple-choice", "antwortmöglichkeiten": [
+      { "id": "ampere-reihe", "text": "Das Amperemeter wird in Reihe mit der Lampe geschaltet." },
+      { "id": "volt-parallel", "text": "Das Voltmeter wird parallel zur Lampe geschaltet." },
+      { "id": "ampere-parallel", "text": "Das Amperemeter wird parallel zur Lampe geschaltet." },
+      { "id": "volt-reihe", "text": "Das Voltmeter wird in Reihe mit der Lampe geschaltet." }
+    ],
+    "lösung": { "richtigeAntworten": ["ampere-reihe", "volt-parallel"], "begründung": "Stromstärke wird in Reihe, Spannung parallel gemessen.", "erwartungshorizont": "Beide Messgeräte werden ihrer Messgröße entsprechend korrekt eingebaut." },
+    "thema": "Elektrizitätslehre – Messen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Amperemeter und Voltmeter korrekt in einen Stromkreis einordnen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen sachgerecht messen" },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "spannung", "messgeraete"], "diagnosetags": ["reihenschaltung", "parallelschaltung"],
+    "fehlvorstellungen": [{ "id": "messgeraete-gleich-angeschlossen", "beschreibung": "Beide Messgeräte werden auf dieselbe Weise eingebaut." }],
+    "förderhinweise": ["Messweg der Stromstärke und Bezugspunkte der Spannung am Schaltbild markieren."]
+  },
+  {
+    "id": "follow-extended-ohm-05", "path": "extended", "reihenfolge": 5,
+    "titel": "Verdoppelter Widerstand", "story": "Im Protokoll steht: Spannung unverändert. Widerstand verdoppelt.",
+    "aufgabe": "Wie verändert sich die Stromstärke?",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "halbiert", "text": "Sie halbiert sich." }, { "id": "verdoppelt", "text": "Sie verdoppelt sich." },
+      { "id": "unveraendert", "text": "Sie bleibt unverändert." }, { "id": "vierfach", "text": "Sie vervierfacht sich." }
+    ],
+    "lösung": { "richtigeAntwort": "halbiert", "begründung": "Aus I = U / R folgt bei konstantem U: doppelter Widerstand, halbe Stromstärke.", "erwartungshorizont": "Qualitativer und proportionaler Zusammenhang werden kombiniert." },
+    "thema": "Elektrizitätslehre – Grundgrößen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Eine proportionale Änderung mit dem ohmschen Zusammenhang vorhersagen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen quantitativ verknüpfen" },
+    "kompetenztags": ["elektrizitaet", "spannung", "stromstaerke", "widerstand"], "diagnosetags": ["ohmscher-zusammenhang", "proportionalitaet"],
+    "fehlvorstellungen": [{ "id": "widerstand-und-strom-direkt", "beschreibung": "Widerstand und Stromstärke werden als direkt proportional verstanden." }],
+    "förderhinweise": ["I = U/R mit konstantem U für zwei Widerstandswerte vergleichen."]
+  },
+  {
+    "id": "follow-extended-energie-06", "path": "extended", "reihenfolge": 6,
+    "titel": "Energie im Versuchsaufbau", "story": "Die Anordnung verbindet eine Lichtquelle, eine Solarzelle, einen Energiespeicher, eine Kontrollleuchte und ein Bauteil, das während des Betriebs warm wird.",
+    "aufgabe": "Welche Kette beschreibt die wesentlichen Energieumwandlungen am besten?",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "strahlung-elektrisch-chemisch-licht", "text": "Strahlungsenergie → elektrische Energie → chemische Energie → elektrische Energie → Licht und thermische Energie" },
+      { "id": "licht-chemisch-strahlung", "text": "Lichtenergie → chemische Energie → Strahlungsenergie ohne elektrische Übertragung" },
+      { "id": "thermisch-elektrisch-nur-licht", "text": "thermische Energie → elektrische Energie → ausschließlich Lichtenergie" },
+      { "id": "energie-neu", "text": "Der Akku erzeugt nachts neue Energie aus dem Nichts." }
+    ],
+    "lösung": { "richtigeAntwort": "strahlung-elektrisch-chemisch-licht", "begründung": "Solarzelle, Energiespeicher und Kontrollleuchte bilden eine mehrstufige Umwandlungskette; nach der chemischen Speicherung wird Energie wieder elektrisch übertragen.", "erwartungshorizont": "Energiequelle, elektrische Übertragung, Speicherung und Abgabe werden in richtiger Reihenfolge verbunden." },
+    "thema": "Energie – Umwandlung", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Eine mehrstufige Energieumwandlungskette analysieren.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Energieumwandlungsketten beschreiben" },
+    "kompetenztags": ["energie", "energieumwandlung", "energiespeicherung"], "diagnosetags": ["mehrstufige-energiekette"],
+    "fehlvorstellungen": [{ "id": "energieerzeugung-akku", "beschreibung": "Der Akku wird als Energieerzeuger statt als Speicher verstanden." }],
+    "förderhinweise": ["Jedem Bauteil Eingangs- und Ausgangsenergie zuordnen."]
+  },
+  {
+    "id": "follow-extended-dichte-07", "path": "extended", "reihenfolge": 7,
+    "titel": "Probekörper im Wasser", "story": "Auf dem Zettel am Wasserbehälter stehen: Körper A: 0,8 g/cm³. Körper B: 1,2 g/cm³. Wasser: ca. 1,0 g/cm³.",
+    "aufgabe": "Welche Vorhersage ist fachlich begründet?",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "a-schwimmt-b-sinkt", "text": "A schwimmt und B sinkt, weil ihre Dichten unter beziehungsweise über der Wasserdichte liegen." },
+      { "id": "beide-schwimmen", "text": "Beide schwimmen, weil beide Dichten nahe bei 1,0 g/cm³ liegen." },
+      { "id": "a-sinkt-b-schwimmt", "text": "A sinkt und B schwimmt, weil der dichtere Körper stärker aufgetrieben wird." },
+      { "id": "masse-fehlt", "text": "Ohne die Massen ist keine Vorhersage möglich." }
+    ],
+    "lösung": { "richtigeAntwort": "a-schwimmt-b-sinkt", "begründung": "A ist weniger dicht als Wasser, B dichter als Wasser.", "erwartungshorizont": "Beide Körper werden getrennt mit der Wasserdichte verglichen und begründet vorhergesagt." },
+    "thema": "Mechanik – Dichte und Auftrieb", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Aus zwei Dichtevergleichen begründete Vorhersagen ableiten.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Dichte zur Vorhersage von Schwimmen und Sinken nutzen" },
+    "kompetenztags": ["mechanik", "dichte", "auftrieb", "vorhersage"], "diagnosetags": ["dichtevergleich", "begruendung"],
+    "fehlvorstellungen": [{ "id": "naehe-zu-wasser-reicht", "beschreibung": "Die bloße Nähe zur Wasserdichte wird als Schwimmkriterium verwendet." }],
+    "förderhinweise": ["Für jeden Körper ein eigenes Vergleichszeichen zur Wasserdichte setzen."]
+  },
+  {
+    "id": "follow-extended-elektrolabor-messgeraete-08", "path": "extended", "reihenfolge": 8,
+    "titel": "Messgeräte anschließen", "story": "Ein einfacher Stromkreis aus Batterie, Schalter und Lampe ist vorbereitet. Der Wartungshinweis ist nach dem Lesen nicht mehr sichtbar; Anschlusspunkte sind nicht markiert.",
+    "aufgabe": "Wähle beide richtigen Anschlüsse aus.",
+    "antworttyp": "multiple-choice", "antwortmöglichkeiten": [
+      { "id": "amperemeter-reihe", "text": "Amperemeter in Reihe" }, { "id": "voltmeter-parallel", "text": "Voltmeter parallel zur Lampe" },
+      { "id": "amperemeter-parallel", "text": "Amperemeter parallel zur Lampe" }, { "id": "voltmeter-reihe", "text": "Voltmeter in Reihe" }
+    ],
+    "lösung": { "richtigeAntworten": ["amperemeter-reihe", "voltmeter-parallel"], "begründung": "Das Amperemeter wird in Reihe und das Voltmeter parallel zur Lampe geschaltet.", "erwartungshorizont": "Beide Messgeräte werden ohne markierte Anschlusspunkte korrekt platziert." },
+    "thema": "Elektrizitätslehre – Messen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Amperemeter und Voltmeter selbstständig sachgerecht anschließen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen sachgerecht messen" },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "spannung", "messgeraete"], "diagnosetags": ["messgeraete-anschluss"],
+    "fehlvorstellungen": [{ "id": "messgeraete-vertauscht", "beschreibung": "Reihen- und Parallelschaltung der Messgeräte werden vertauscht." }],
+    "förderhinweise": ["Messweg der Stromstärke und Bezugspunkte der Spannung getrennt betrachten."], "wiederholenBisRichtig": true,
+    "fehlermeldung": "Messung fehlgeschlagen."
+  },
+  {
+    "id": "follow-extended-elektrolabor-zuordnung-09", "path": "extended", "reihenfolge": 9,
+    "titel": "Größen, Einheiten und Bedeutungen", "story": "Die Messstation startet und zeigt Karten für Größen, Einheiten und Formelzeichen.",
+    "aufgabe": "Ordne Formelzeichen, Einheiten und Bedeutungen den drei elektrischen Größen zu.",
+    "antworttyp": "zuordnung", "antwortmöglichkeiten": [
+      { "id": "stromstaerke", "text": "Stromstärke" }, { "id": "spannung", "text": "Spannung" }, { "id": "widerstand", "text": "Widerstand" },
+      { "id": "ampere", "text": "Ampere (A)" }, { "id": "volt", "text": "Volt (V)" }, { "id": "ohm", "text": "Ohm (Ω)" },
+      { "id": "bedeutung-strom", "text": "Ladungsmenge, die in einer bestimmten Zeit fließt" },
+      { "id": "bedeutung-spannung", "text": "Antrieb für den elektrischen Strom" },
+      { "id": "bedeutung-widerstand", "text": "Behinderung des elektrischen Stroms" }
+    ],
+    "zuordnungen": [
+      { "id": "i-begriff", "text": "I gehört zu ...", "antwortIds": ["stromstaerke", "spannung", "widerstand"], "richtigeAntwort": "stromstaerke" },
+      { "id": "u-begriff", "text": "U gehört zu ...", "antwortIds": ["stromstaerke", "spannung", "widerstand"], "richtigeAntwort": "spannung" },
+      { "id": "r-begriff", "text": "R gehört zu ...", "antwortIds": ["stromstaerke", "spannung", "widerstand"], "richtigeAntwort": "widerstand" },
+      { "id": "strom-einheit", "text": "Einheit der Stromstärke", "antwortIds": ["ampere", "volt", "ohm"], "richtigeAntwort": "ampere" },
+      { "id": "spannung-einheit", "text": "Einheit der Spannung", "antwortIds": ["ampere", "volt", "ohm"], "richtigeAntwort": "volt" },
+      { "id": "widerstand-einheit", "text": "Einheit des Widerstands", "antwortIds": ["ampere", "volt", "ohm"], "richtigeAntwort": "ohm" },
+      { "id": "strom-bedeutung", "text": "Stromstärke bedeutet ...", "antwortIds": ["bedeutung-strom", "bedeutung-spannung", "bedeutung-widerstand"], "richtigeAntwort": "bedeutung-strom" },
+      { "id": "spannung-bedeutung", "text": "Spannung bedeutet ...", "antwortIds": ["bedeutung-strom", "bedeutung-spannung", "bedeutung-widerstand"], "richtigeAntwort": "bedeutung-spannung" },
+      { "id": "widerstand-bedeutung", "text": "Widerstand bedeutet ...", "antwortIds": ["bedeutung-strom", "bedeutung-spannung", "bedeutung-widerstand"], "richtigeAntwort": "bedeutung-widerstand" }
+    ],
+    "lösung": { "begründung": "Größen, Einheiten, Formelzeichen und Bedeutungen sind richtig verbunden.", "erwartungshorizont": "Alle Zuordnungen und Bedeutungen werden fachlich korrekt erkannt." },
+    "thema": "Elektrizitätslehre – Grundgrößen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Elektrische Größen zuordnen und ihre Bedeutung kurz beschreiben.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen beschreiben und verwenden" },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "spannung", "widerstand"], "diagnosetags": ["groessen-einheiten-formelzeichen"],
+    "fehlvorstellungen": [{ "id": "elektrische-groessen-vertauscht", "beschreibung": "Bedeutung, Einheit oder Formelzeichen elektrischer Größen werden verwechselt." }],
+    "förderhinweise": ["Größe, Einheit, Formelzeichen und Bedeutung getrennt prüfen."], "wiederholenBisRichtig": true,
+    "fehlermeldung": "Messung fehlgeschlagen."
+  },
+  {
+    "id": "follow-extended-elektrolabor-ohm-10", "path": "extended", "reihenfolge": 10,
+    "titel": "Das Ohmsche Gesetz", "story": "Die Messstation benötigt einen Widerstandswert. Spannung: 6 Volt. Stromstärke: 0,3 Ampere. Gesucht: Widerstand. Angezeigt wird nur U = R · I.",
+    "aufgabe": "Stelle die Gleichung selbst nach R um, rechne und gib nur den Zahlenwert des Widerstands ein.",
+    "antworttyp": "zahl", "antwortmöglichkeiten": [],
+    "lösung": { "richtigerWert": 20, "toleranz": 0, "begründung": "Aus U = R · I folgt nach eigener Umstellung ein Widerstand von 20 Ω.", "erwartungshorizont": "Die Gleichung wird selbstständig nach R umgestellt und der Widerstand korrekt berechnet." },
+    "thema": "Elektrizitätslehre – Ohmsches Gesetz", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 2,
+    "lernziel": "Das Ohmsche Gesetz nach dem Widerstand umstellen und anwenden.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen quantitativ verknüpfen" },
+    "kompetenztags": ["elektrizitaet", "spannung", "stromstaerke", "widerstand"], "diagnosetags": ["ohmsches-gesetz", "formelumstellung"],
+    "fehlvorstellungen": [{ "id": "ohm-falsch-umgestellt", "beschreibung": "Das Ohmsche Gesetz wird nicht passend nach dem Widerstand umgestellt." }],
+    "förderhinweise": ["Die gesuchte Größe vor dem Einsetzen isolieren."], "wiederholenBisRichtig": true,
+    "fehlermeldung": "Messung fehlgeschlagen.", "hinweisNachFehlern": 2,
+    "mrLaserHinweis": "Wir suchen den Widerstand. Vielleicht hilft es, die Formel nach R aufzulösen."
+  }
+]

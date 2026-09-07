@@ -1,0 +1,459 @@
+[
+  {
+    "id": "mechanik-kraft-einheit-01",
+    "titel": "Einheit der Kraft",
+    "raum": "laser-labor",
+    "thema": "Mechanik – Kraft",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "Wechselwirkungen",
+    "prozesskompetenz": "K",
+    "anforderungsbereich": "I",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler ordnen der physikalischen Größe Kraft die Einheit Newton zu.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Themenfeld Mobilität",
+      "kompetenz": "Kräfte als Wechselwirkungen beschreiben und physikalische Größen mit Einheiten verwenden",
+      "basiskonzept": "Wechselwirkungen",
+      "prozesskompetenz": "Kommunikation (K)"
+    },
+    "operator": "Wähle aus",
+    "story": "Mr. Laser wiederholt mit der Klasse wichtige physikalische Größen und ihre Einheiten.",
+    "aufgabe": "Welche Einheit wird für die Kraft verwendet?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "joule", "text": "Joule" },
+      { "id": "newton", "text": "Newton" },
+      { "id": "watt", "text": "Watt" },
+      { "id": "pascal", "text": "Pascal" }
+    ],
+    "lösung": {
+      "richtigeAntwort": "newton",
+      "begründung": "Die SI-Einheit der Kraft ist das Newton mit dem Einheitenzeichen N.",
+      "erwartungshorizont": "Die Antwort Newton wird ausgewählt; Kraft wird eindeutig von Energie, Leistung und Druck abgegrenzt."
+    },
+    "kompetenztags": ["mechanik", "kraft", "einheiten", "prozesskompetenz-k", "anforderungsbereich-i"],
+    "diagnosetags": ["kraft-einheit", "groesse-einheit-zuordnen"],
+    "fehlvorstellungen": [
+      { "id": "kraft-in-joule", "beschreibung": "Kraft und Energie werden verwechselt." },
+      { "id": "kraft-in-watt", "beschreibung": "Kraft und Leistung werden verwechselt." },
+      { "id": "kraft-in-pascal", "beschreibung": "Kraft und Druck werden verwechselt." }
+    ],
+    "förderhinweise": [
+      "Eine Zuordnungstabelle aus Größe, Formelzeichen, Einheit und Einheitenzeichen erstellen.",
+      "Kraft, Energie, Leistung und Druck anhand einfacher Anwendungssituationen voneinander abgrenzen."
+    ]
+  },
+  {
+    "id": "mechanik-geschwindigkeit-formel-02",
+    "titel": "Geschwindigkeitsformel",
+    "raum": "transferkorridor",
+    "thema": "Mechanik – Bewegung",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "System",
+    "prozesskompetenz": "K",
+    "anforderungsbereich": "I",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler geben den Zusammenhang zwischen Geschwindigkeit, Weg und Zeit als Formel an.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Themenfeld Mobilität",
+      "kompetenz": "Geschwindigkeit als Quotient aus zurückgelegtem Weg und benötigter Zeit beschreiben",
+      "basiskonzept": "System",
+      "prozesskompetenz": "Kommunikation (K)"
+    },
+    "operator": "Wähle aus",
+    "story": "Für eine Bewegungsbeschreibung fragt Mr. Laser nach dem grundlegenden Zusammenhang der verwendeten Größen.",
+    "aufgabe": "Welche Formel beschreibt die Geschwindigkeit?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "produkt", "text": "v = s · t" },
+      { "id": "weg-durch-zeit", "text": "v = s / t" },
+      { "id": "zeit-durch-weg", "text": "v = t / s" },
+      { "id": "summe", "text": "v = s + t" }
+    ],
+    "lösung": {
+      "richtigeAntwort": "weg-durch-zeit",
+      "begründung": "Bei gleichförmiger Bewegung ist die Geschwindigkeit der zurückgelegte Weg geteilt durch die dafür benötigte Zeit.",
+      "erwartungshorizont": "Die Formel v = s / t wird ausgewählt und damit Weg und Zeit korrekt ins Verhältnis gesetzt."
+    },
+    "kompetenztags": ["mechanik", "bewegung", "geschwindigkeit", "prozesskompetenz-k", "anforderungsbereich-i"],
+    "diagnosetags": ["geschwindigkeitsformel", "formel-groessenzuordnung"],
+    "fehlvorstellungen": [
+      { "id": "geschwindigkeit-produkt", "beschreibung": "Weg und Zeit werden multipliziert statt dividiert." },
+      { "id": "quotient-vertauscht", "beschreibung": "Zeit und Weg werden im Quotienten vertauscht." },
+      { "id": "groessen-addiert", "beschreibung": "Unterschiedliche physikalische Größen werden addiert." }
+    ],
+    "förderhinweise": [
+      "Geschwindigkeit sprachlich als 'Weg pro Zeit' formulieren und anschließend symbolisch notieren.",
+      "Die Einheit m/s aus dem Quotienten von Weg- und Zeiteinheit ableiten."
+    ]
+  },
+  {
+    "id": "mechanik-weg-berechnen-03",
+    "titel": "Weg bei konstanter Geschwindigkeit",
+    "raum": "transferkorridor",
+    "thema": "Mechanik – Bewegung",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "System",
+    "prozesskompetenz": "EG",
+    "anforderungsbereich": "II",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler berechnen bei konstanter Geschwindigkeit den zurückgelegten Weg aus Geschwindigkeit und Zeit.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Themenfeld Mobilität",
+      "kompetenz": "Bewegungen mithilfe der Größen Weg, Zeit und Geschwindigkeit quantitativ beschreiben",
+      "basiskonzept": "System",
+      "prozesskompetenz": "Erkenntnisgewinnung (EG)"
+    },
+    "operator": "Bestimme",
+    "story": "Auf dem Whiteboard steht ein kurzes Beispiel zu einer gleichförmigen Bewegung.",
+    "aufgabe": "Ein Fahrzeug fährt mit einer konstanten Geschwindigkeit von 20 m/s. Welche Strecke legt es in 5 Sekunden zurück?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "vier-meter", "text": "4 m" },
+      { "id": "fuenfundzwanzig-meter", "text": "25 m" },
+      { "id": "hundert-meter", "text": "100 m" },
+      { "id": "vierhundert-meter", "text": "400 m" }
+    ],
+    "lösung": {
+      "richtigeAntwort": "hundert-meter",
+      "begründung": "Mit s = v · t ergibt sich s = 20 m/s · 5 s = 100 m.",
+      "erwartungshorizont": "Die Strecke 100 m wird über die Multiplikation von Geschwindigkeit und Zeit bestimmt."
+    },
+    "kompetenztags": ["mechanik", "bewegung", "geschwindigkeit", "berechnung", "prozesskompetenz-eg", "anforderungsbereich-ii"],
+    "diagnosetags": ["weg-berechnen", "formelumstellung", "einheiten"],
+    "fehlvorstellungen": [
+      { "id": "weg-als-quotient", "beschreibung": "Geschwindigkeit wird durch Zeit dividiert." },
+      { "id": "werte-addiert", "beschreibung": "Geschwindigkeit und Zeit werden addiert." },
+      { "id": "zeit-doppelt-multipliziert", "beschreibung": "Die Zeit wird bei der Wegberechnung mehrfach berücksichtigt." }
+    ],
+    "förderhinweise": [
+      "Die Bedeutung von 20 m/s als 20 Meter in jeder Sekunde veranschaulichen.",
+      "Formel, Einsetzen mit Einheiten und Ergebnis in getrennten Schritten notieren."
+    ]
+  },
+  {
+    "id": "elektrizitaet-amperemeter-04",
+    "titel": "Messgröße des Amperemeters",
+    "raum": "laser-labor",
+    "thema": "Elektrizitätslehre – Messen",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "System",
+    "prozesskompetenz": "EG",
+    "anforderungsbereich": "I",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler ordnen dem Amperemeter die Messgröße Stromstärke zu.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Elektrizitätslehre",
+      "kompetenz": "Elektrische Größen in Stromkreisen unterscheiden und mit geeigneten Messgeräten erfassen",
+      "basiskonzept": "System",
+      "prozesskompetenz": "Erkenntnisgewinnung (EG)"
+    },
+    "operator": "Wähle aus",
+    "story": "Auf dem Experimentiertisch liegt ein Amperemeter neben einem einfachen Stromkreis.",
+    "aufgabe": "Welche physikalische Größe wird mit einem Amperemeter gemessen?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "spannung", "text": "Spannung" },
+      { "id": "stromstaerke", "text": "Stromstärke" },
+      { "id": "widerstand", "text": "Widerstand" },
+      { "id": "elektrische-energie", "text": "elektrische Energie" }
+    ],
+    "lösung": {
+      "richtigeAntwort": "stromstaerke",
+      "begründung": "Ein Amperemeter misst die elektrische Stromstärke, üblicherweise in Ampere.",
+      "erwartungshorizont": "Die Stromstärke wird als Messgröße des Amperemeters erkannt."
+    },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "messgeraete", "prozesskompetenz-eg", "anforderungsbereich-i"],
+    "diagnosetags": ["amperemeter", "messgroesse", "elektrische-groessen"],
+    "fehlvorstellungen": [
+      { "id": "amperemeter-misst-spannung", "beschreibung": "Amperemeter und Voltmeter werden verwechselt." },
+      { "id": "amperemeter-misst-widerstand", "beschreibung": "Stromstärke und Widerstand werden als Messgrößen verwechselt." }
+    ],
+    "förderhinweise": [
+      "Messgerät, Messgröße, Formelzeichen und Einheit tabellarisch zuordnen.",
+      "Amperemeter und Voltmeter anhand ihrer Schaltsymbole und Einbauweise vergleichen."
+    ]
+  },
+  {
+    "id": "mechanik-dichte-holz-05",
+    "titel": "Schwimmen von Holz",
+    "raum": "laser-labor",
+    "thema": "Mechanik – Dichte und Auftrieb",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "Wechselwirkungen",
+    "prozesskompetenz": "EG",
+    "anforderungsbereich": "II",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler erklären das Schwimmen eines Holzkörpers über den Dichtevergleich mit Wasser.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Stoffeigenschaften und Wechselwirkungen",
+      "kompetenz": "Dichte als Stoffeigenschaft zur Erklärung von Schwimmen und Sinken verwenden",
+      "basiskonzept": "Wechselwirkungen",
+      "prozesskompetenz": "Erkenntnisgewinnung (EG)"
+    },
+    "operator": "Begründe durch Auswahl",
+    "story": "In einem Wasserbecken auf dem Demonstrationstisch schwimmt ein Stück Holz.",
+    "aufgabe": "Warum schwimmt ein Stück Holz normalerweise auf Wasser?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "keine-masse", "text": "Holz besitzt keine Masse." },
+      { "id": "geringere-dichte", "text": "Die Dichte des Holzes ist geringer als die Dichte des Wassers." },
+      { "id": "keine-gewichtskraft", "text": "Wasser übt keine Gewichtskraft auf Holz aus." },
+      { "id": "luftdruck", "text": "Holz wird vom Luftdruck nach oben gezogen." }
+    ],
+    "lösung": {
+      "richtigeAntwort": "geringere-dichte",
+      "begründung": "Holz schwimmt normalerweise, weil seine mittlere Dichte geringer als die Dichte des Wassers ist und sich ein Gleichgewicht aus Gewichtskraft und Auftrieb einstellen kann.",
+      "erwartungshorizont": "Die geringere Dichte des Holzes gegenüber Wasser wird als entscheidender Vergleich erkannt."
+    },
+    "kompetenztags": ["mechanik", "dichte", "auftrieb", "wechselwirkungen", "prozesskompetenz-eg", "anforderungsbereich-ii"],
+    "diagnosetags": ["dichtevergleich", "schwimmen-sinken", "gewichtskraft"],
+    "fehlvorstellungen": [
+      { "id": "schwimmende-koerper-masselos", "beschreibung": "Schwimmende Körper werden als masselos angesehen." },
+      { "id": "keine-gewichtskraft-im-wasser", "beschreibung": "Die Gewichtskraft verschwinde im Wasser." },
+      { "id": "luftdruck-zieht-hoch", "beschreibung": "Luftdruck werde als nach oben ziehende Ursache des Schwimmens gedeutet." }
+    ],
+    "förderhinweise": [
+      "Masse und Volumen gleich großer Probekörper vergleichen und daraus Dichten bestimmen.",
+      "Gewichtskraft und Auftriebskraft in einem Kräftebild gegenüberstellen."
+    ]
+  },
+  {
+    "id": "energie-grundsaetze-06",
+    "titel": "Aussagen über Energie",
+    "raum": "energielabor",
+    "thema": "Energie – Umwandlung und Übertragung",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "Energie",
+    "prozesskompetenz": "K",
+    "anforderungsbereich": "I",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler erkennen Energieumwandlung und Energieübertragung als fachlich richtige Aussagen und grenzen sie von Erzeugung und Verschwinden ab.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Basiskonzept Energie",
+      "kompetenz": "Energieformen, Energieumwandlungen und Energieübertragungen beschreiben",
+      "basiskonzept": "Energie",
+      "prozesskompetenz": "Kommunikation (K)"
+    },
+    "operator": "Wähle aus",
+    "story": "Mr. Laser sammelt grundlegende Aussagen, die für spätere Energiebetrachtungen gelten sollen.",
+    "aufgabe": "Welche Aussagen über Energie sind richtig? Wähle alle richtigen Antworten aus.",
+    "antworttyp": "multiple-choice",
+    "antwortmöglichkeiten": [
+      { "id": "umwandlung", "text": "Energie kann von einer Form in eine andere umgewandelt werden." },
+      { "id": "erzeugung", "text": "Energie kann aus dem Nichts erzeugt werden." },
+      { "id": "uebertragung", "text": "Energie kann zwischen Körpern übertragen werden." },
+      { "id": "verschwindet", "text": "Energie verschwindet nach ihrer Nutzung vollständig." }
+    ],
+    "lösung": {
+      "richtigeAntworten": ["umwandlung", "uebertragung"],
+      "begründung": "Energie kann umgewandelt und übertragen werden. Sie wird weder aus dem Nichts erzeugt noch verschwindet sie vollständig.",
+      "erwartungshorizont": "Umwandlung und Übertragung werden gemeinsam ausgewählt; Erzeugung aus dem Nichts und vollständiges Verschwinden werden verworfen."
+    },
+    "kompetenztags": ["energie", "energieumwandlung", "energieuebertragung", "prozesskompetenz-k", "anforderungsbereich-i"],
+    "diagnosetags": ["energieerhaltung", "energie-wird-erzeugt", "energie-verschwindet"],
+    "fehlvorstellungen": [
+      { "id": "energie-aus-dem-nichts", "beschreibung": "Energie könne aus dem Nichts erzeugt werden." },
+      { "id": "energie-nach-nutzung-weg", "beschreibung": "Energie verschwinde nach ihrer Nutzung vollständig." }
+    ],
+    "förderhinweise": [
+      "Energieumwandlungsketten an Alltagsgeräten mit Eingangs- und Ausgangsformen erstellen.",
+      "Zwischen Energieübertragung, Energieumwandlung und umgangssprachlichem Energieverbrauch unterscheiden."
+    ]
+  },
+  {
+    "id": "elektrizitaet-grundgroessen-07",
+    "titel": "Elektrische Grundgrößen",
+    "raum": "energielabor",
+    "thema": "Elektrizitätslehre – Grundgrößen",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "System",
+    "prozesskompetenz": "K",
+    "anforderungsbereich": "I",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler identifizieren Stromstärke, Spannung und Widerstand als grundlegende Größen elektrischer Stromkreise.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Elektrizitätslehre",
+      "kompetenz": "Stromstärke, Spannung und Widerstand als Größen zur Beschreibung elektrischer Stromkreise verwenden",
+      "basiskonzept": "System",
+      "prozesskompetenz": "Kommunikation (K)"
+    },
+    "operator": "Wähle aus",
+    "story": "Für das nächste Experiment sollen zunächst die benötigten elektrischen Größen benannt werden.",
+    "aufgabe": "Welche Größen gehören zu den grundlegenden Größen eines elektrischen Stromkreises? Wähle alle richtigen Antworten aus.",
+    "antworttyp": "multiple-choice",
+    "antwortmöglichkeiten": [
+      { "id": "stromstaerke", "text": "Stromstärke" },
+      { "id": "spannung", "text": "Spannung" },
+      { "id": "widerstand", "text": "Widerstand" },
+      { "id": "geschwindigkeit", "text": "Geschwindigkeit" }
+    ],
+    "lösung": {
+      "richtigeAntworten": ["stromstaerke", "spannung", "widerstand"],
+      "begründung": "Stromstärke, Spannung und Widerstand beschreiben einen elektrischen Stromkreis; Geschwindigkeit ist keine elektrische Grundgröße.",
+      "erwartungshorizont": "Alle drei elektrischen Größen und ausschließlich diese werden ausgewählt."
+    },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "spannung", "widerstand", "prozesskompetenz-k", "anforderungsbereich-i"],
+    "diagnosetags": ["elektrische-groessen", "stromkreis", "begriffszuordnung"],
+    "fehlvorstellungen": [
+      { "id": "bewegungsgroesse-im-stromkreis", "beschreibung": "Die mechanische Größe Geschwindigkeit wird mit elektrischen Größen gleichgesetzt." },
+      { "id": "elektrische-groessen-unvollstaendig", "beschreibung": "Spannung, Stromstärke oder Widerstand werden nicht als eigenständige Größen unterschieden." }
+    ],
+    "förderhinweise": [
+      "Formelzeichen, Einheit und Messgerät für Stromstärke, Spannung und Widerstand gegenüberstellen.",
+      "Die drei Größen an einem einfachen Stromkreis jeweils sprachlich beschreiben."
+    ]
+  },
+  {
+    "id": "elektrizitaet-widerstand-08",
+    "titel": "Elektrischer Widerstand",
+    "raum": "energielabor",
+    "thema": "Elektrizitätslehre – Grundgrößen",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "System",
+    "prozesskompetenz": "K",
+    "anforderungsbereich": "I",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler beschreiben den elektrischen Widerstand als Maß für die Behinderung des Stromflusses.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Elektrizitätslehre",
+      "kompetenz": "Den elektrischen Widerstand zur Beschreibung von Stromkreisen verwenden",
+      "basiskonzept": "System",
+      "prozesskompetenz": "Kommunikation (K)"
+    },
+    "operator": "Wähle aus",
+    "story": "Mr. Laser zeigt zwei Bauteile, durch die bei gleicher Spannung unterschiedlich starke Ströme fließen.",
+    "aufgabe": "Welche Aussage beschreibt den elektrischen Widerstand am besten?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "behinderung", "text": "Er gibt an, wie stark der Stromfluss behindert wird." },
+      { "id": "ladungsmenge", "text": "Er gibt an, wie viel elektrische Ladung insgesamt vorhanden ist." },
+      { "id": "geschwindigkeit", "text": "Er ist die Geschwindigkeit der Elektronen." },
+      { "id": "energiequelle", "text": "Er bezeichnet die Energiequelle eines Stromkreises." }
+    ],
+    "lösung": {
+      "richtigeAntwort": "behinderung",
+      "begründung": "Der elektrische Widerstand beschreibt, wie stark ein Bauteil den elektrischen Stromfluss bei gegebener Spannung begrenzt.",
+      "erwartungshorizont": "Widerstand wird als Maß für die Behinderung beziehungsweise Begrenzung des Stromflusses erkannt."
+    },
+    "kompetenztags": ["elektrizitaet", "widerstand", "stromkreis", "prozesskompetenz-k", "anforderungsbereich-i"],
+    "diagnosetags": ["widerstandsbegriff", "elektrische-groessen"],
+    "fehlvorstellungen": [
+      { "id": "widerstand-als-ladungsmenge", "beschreibung": "Widerstand wird als vorhandene Ladungsmenge verstanden." },
+      { "id": "widerstand-als-elektronengeschwindigkeit", "beschreibung": "Widerstand wird mit einer Teilchengeschwindigkeit gleichgesetzt." },
+      { "id": "widerstand-als-quelle", "beschreibung": "Ein Widerstand wird als Energiequelle verstanden." }
+    ],
+    "förderhinweise": [
+      "Bei gleicher Spannung Stromstärken für verschiedene Widerstände vergleichen.",
+      "Widerstand als Bauteileigenschaft von Stromstärke und Spannung sprachlich abgrenzen."
+    ]
+  },
+  {
+    "id": "mechanik-traegheit-bus-09",
+    "titel": "Trägheit im bremsenden Bus",
+    "raum": "transferkorridor",
+    "thema": "Mechanik – Trägheit",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "Wechselwirkungen",
+    "prozesskompetenz": "EG",
+    "anforderungsbereich": "II",
+    "schwierigkeitsgrad": 2,
+    "lernziel": "Die Schülerinnen und Schüler erklären das Bewegungsverhalten eines Fahrgasts beim Bremsen mit dem Trägheitsprinzip.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Themenfeld Mobilität",
+      "kompetenz": "Bewegungsänderungen und Trägheitsphänomene mithilfe von Kräften beschreiben",
+      "basiskonzept": "Wechselwirkungen",
+      "prozesskompetenz": "Erkenntnisgewinnung (EG)"
+    },
+    "operator": "Begründe durch Auswahl",
+    "story": "Mr. Laser erinnert an eine typische Beobachtung während einer Busfahrt.",
+    "aufgabe": "Ein Bus bremst plötzlich. Warum bewegt sich ein stehender Fahrgast gegenüber dem Bus nach vorne?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "bus-schiebt", "text": "Der Bus schiebt den Fahrgast nach vorne." },
+      { "id": "traegheit", "text": "Der Körper des Fahrgasts behält aufgrund seiner Trägheit zunächst seine Bewegung bei." },
+      { "id": "kraft-nach-vorne", "text": "Beim Bremsen entsteht eine neue Kraft nach vorne." },
+      { "id": "keine-gewichtskraft", "text": "Der Fahrgast verliert kurzzeitig seine Gewichtskraft." }
+    ],
+    "lösung": {
+      "richtigeAntwort": "traegheit",
+      "begründung": "Der Bus wird langsamer, während der Körper des Fahrgasts aufgrund seiner Trägheit seinen bisherigen Bewegungszustand zunächst beibehält.",
+      "erwartungshorizont": "Das Trägheitsprinzip wird als Ursache gewählt; eine zusätzliche nach vorne gerichtete Kraft wird nicht angenommen."
+    },
+    "kompetenztags": ["mechanik", "traegheit", "wechselwirkungen", "prozesskompetenz-eg", "anforderungsbereich-ii"],
+    "diagnosetags": ["traegheitsprinzip", "bus-schiebt", "kraft-nach-vorne", "gewichtskraft"],
+    "fehlvorstellungen": [
+      { "id": "bus-schiebt-vor", "beschreibung": "Der Bus schiebe den Fahrgast beim Bremsen nach vorne." },
+      { "id": "bremskraft-nach-vorne", "beschreibung": "Beim Bremsen entstehe eine zusätzliche Kraft nach vorne." },
+      { "id": "gewichtskraft-verschwindet", "beschreibung": "Die Gewichtskraft verschwinde während des Bremsens kurzzeitig." }
+    ],
+    "förderhinweise": [
+      "Bewegungszustände von Bus und Fahrgast vor und während des Bremsens getrennt beschreiben.",
+      "Ein Rollwagenexperiment nutzen und zwischen Bewegung gegenüber Straße und Bus unterscheiden."
+    ]
+  },
+  {
+    "id": "thermodynamik-schmelzen-10",
+    "titel": "Aggregatzustandsänderung Schmelzen",
+    "raum": "laser-labor",
+    "thema": "Thermodynamik – Aggregatzustände",
+    "fach": "Physik",
+    "jahrgang": 9,
+    "basiskonzept": "Stoff-Teilchen-Beziehungen",
+    "prozesskompetenz": "K",
+    "anforderungsbereich": "I",
+    "schwierigkeitsgrad": 1,
+    "lernziel": "Die Schülerinnen und Schüler ordnen dem Schmelzen den Übergang vom festen zum flüssigen Aggregatzustand zu.",
+    "kc_referenz": {
+      "quelle": "Kerncurriculum für die Integrierte Gesamtschule, Schuljahrgänge 5–10, Naturwissenschaften (Niedersachsen, 2020)",
+      "kompetenzbereich": "Inhaltsbezogene Kompetenzen; Stoff-Teilchen-Beziehungen und thermische Vorgänge",
+      "kompetenz": "Aggregatzustandsänderungen beschreiben und fachsprachlich benennen",
+      "basiskonzept": "Stoff-Teilchen-Beziehungen",
+      "prozesskompetenz": "Kommunikation (K)"
+    },
+    "operator": "Wähle aus",
+    "story": "Zum Abschluss zeigt Mr. Laser eine Übersicht der Aggregatzustandsänderungen.",
+    "aufgabe": "Welcher Übergang beschreibt das Schmelzen?",
+    "antworttyp": "single-choice",
+    "antwortmöglichkeiten": [
+      { "id": "gas-fluessig", "text": "gasförmig → flüssig" },
+      { "id": "fest-fluessig", "text": "fest → flüssig" },
+      { "id": "fluessig-gas", "text": "flüssig → gasförmig" },
+      { "id": "fluessig-fest", "text": "flüssig → fest" }
+    ],
+    "lösung": {
+      "richtigeAntwort": "fest-fluessig",
+      "begründung": "Schmelzen bezeichnet den Übergang eines Stoffes vom festen in den flüssigen Aggregatzustand.",
+      "erwartungshorizont": "Der Übergang fest → flüssig wird dem Begriff Schmelzen zugeordnet."
+    },
+    "kompetenztags": ["thermodynamik", "aggregatzustaende", "stoff-teilchen-beziehungen", "prozesskompetenz-k", "anforderungsbereich-i"],
+    "diagnosetags": ["schmelzen", "aggregatzustandsaenderung", "fachbegriffe"],
+    "fehlvorstellungen": [
+      { "id": "schmelzen-kondensieren", "beschreibung": "Schmelzen und Kondensieren werden verwechselt." },
+      { "id": "schmelzen-verdampfen", "beschreibung": "Schmelzen und Verdampfen werden verwechselt." },
+      { "id": "schmelzen-erstarren", "beschreibung": "Schmelzen und Erstarren werden verwechselt." }
+    ],
+    "förderhinweise": [
+      "Die sechs Aggregatzustandsänderungen in einem Zustandsdiagramm mit Pfeilrichtungen ordnen.",
+      "Alltagsbeispiele den Übergängen Schmelzen, Erstarren, Verdampfen und Kondensieren zuordnen."
+    ]
+  }
+]

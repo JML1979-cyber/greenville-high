@@ -1,0 +1,331 @@
+:root { --navy:#06131f; --anthracite:#17212b; --panel:rgba(10,25,38,.9); --cyan:#4fd3d5; --cyan-soft:#a7f2ef; --orange:#ff9a49; --text:#edf8f8; --muted:#a9bec5; }
+* { box-sizing:border-box; }
+body { margin:0; min-width:320px; min-height:100vh; color:var(--text); font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif; background:linear-gradient(90deg,rgba(2,10,17,.88),rgba(2,12,20,.62)),url("../assets/background.jpg") center/cover fixed var(--navy); }
+.app-shell { min-height:100vh; padding:1rem clamp(1rem,3vw,2.5rem) 2rem; }
+.screen-root { display:grid; place-items:start center; padding-top:1.25rem; }
+.screen-panel { width:min(100%, 760px); padding:clamp(1.75rem,5vw,4rem); background:var(--panel); border:1px solid rgba(79,211,213,.45); border-left:4px solid var(--cyan); box-shadow:0 18px 45px rgba(0,0,0,.35); }
+.eyebrow { margin:0 0 .6rem; color:var(--cyan); font-size:.76rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+h1 { margin:0; font-size:clamp(2rem,6vw,4.4rem); letter-spacing:.04em; line-height:1.05; } h2 { margin-top:1.7rem; font-size:1.2rem; }
+p { max-width:66ch; line-height:1.6; } .lead { color:var(--cyan-soft); font-size:1.25rem; } .story { border-left:2px solid var(--cyan); padding-left:1rem; color:var(--muted); } .operator,.hint,.data-note { color:var(--muted); font-size:.92rem; }
+.actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:2rem; }
+.button { border:1px solid #54707b; padding:.75rem 1rem; color:var(--text); background:transparent; font:inherit; cursor:pointer; } .button:hover,.button:focus-visible { border-color:var(--cyan); color:var(--cyan-soft); outline:2px solid transparent; } .button-primary { background:var(--cyan); border-color:var(--cyan); color:#06202a; font-weight:700; } .button-primary:hover,.button-primary:focus-visible { background:var(--cyan-soft); color:#031116; }
+.answer-option { display:flex; gap:.7rem; align-items:flex-start; margin:.7rem 0; padding:.8rem; border:1px solid #3a505b; background:rgba(5,18,28,.45); cursor:pointer; } .answer-option:has(input:checked) { border-color:var(--cyan); } input { accent-color:var(--cyan); margin-top:.22rem; } .button:disabled { cursor:not-allowed; opacity:.5; } .answer-field { display:block; margin:1.2rem 0 .45rem; color:var(--cyan-soft); } textarea,.number-answer,select { padding:.75rem; border:1px solid #3a505b; color:var(--text); background:rgba(5,18,28,.7); font:inherit; } textarea { width:100%; resize:vertical; } .number-answer { width:min(12rem,100%); } textarea:focus,.number-answer:focus,select:focus { border-color:var(--cyan); outline:1px solid var(--cyan); } .matching-row { display:grid; grid-template-columns:minmax(12rem,1fr) minmax(12rem,1fr); gap:.8rem; align-items:center; margin:.7rem 0; } .matching-row span { color:var(--cyan-soft); } .status-list { display:grid; grid-template-columns:max-content 1fr; gap:.4rem 1.2rem; } .status-list dt { color:var(--muted); } .status-list dd { margin:0; } .error-panel { border-left-color:var(--orange); border-color:rgba(255,154,73,.6); } .loading { color:var(--cyan); }
+.boot-sequence { width:min(100%, 760px); min-height:300px; display:flex; align-items:center; padding:clamp(1.75rem,5vw,4rem); background:linear-gradient(120deg,rgba(5,20,31,.94),rgba(9,28,40,.82)); border-left:4px solid var(--cyan); box-shadow:0 18px 45px rgba(0,0,0,.35); animation:boot-fade-in .8s ease-out both; }
+.boot-lines { width:100%; } .boot-line { min-height:1.6em; margin:.35rem 0; color:var(--cyan-soft); font-family:Consolas,"Courier New",monospace; font-size:clamp(.95rem,2.5vw,1.25rem); letter-spacing:.04em; opacity:0; animation:line-fade-in .35s ease-out forwards; } .boot-line:first-child { color:var(--text); font-size:clamp(1.55rem,5vw,2.7rem); font-weight:700; letter-spacing:.08em; } .boot-line:nth-child(2) { color:var(--muted); font-size:.85rem; margin-bottom:1.6rem; } .boot-line:last-child { color:var(--cyan); }
+.boot-sequence.is-complete { animation:boot-fade-out .65s ease-in forwards; } @keyframes boot-fade-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } } @keyframes line-fade-in { to { opacity:1; } } @keyframes boot-fade-out { to { opacity:0; transform:translateY(-5px); } }
+.welcome-screen { max-height:calc(100vh - 4rem); overflow:auto; } .mr-laser-visual { position:relative; width:150px; height:76px; margin:1.5rem 0 1.25rem; } .laser-core { position:absolute; top:27px; left:0; width:22px; height:22px; border:2px solid var(--cyan-soft); border-radius:50%; box-shadow:0 0 14px rgba(79,211,213,.35); } .laser-core::after { content:""; position:absolute; inset:5px; border-radius:50%; background:var(--cyan); } .laser-beam { position:absolute; top:37px; left:24px; width:116px; height:1px; background:linear-gradient(90deg,var(--cyan),transparent); } .laser-orbit { position:absolute; top:9px; left:43px; width:49px; height:55px; border:1px solid rgba(79,211,213,.5); border-radius:50%; transform:rotate(58deg); }
+.mr-laser-dialog { min-height:15.8rem; } .mr-laser-line { min-height:1.6em; margin:.32rem 0; color:var(--cyan-soft); font-size:clamp(.95rem,2.3vw,1.08rem); opacity:0; animation:line-fade-in .35s ease-out forwards; } .mr-laser-line:first-child { color:var(--text); } .mr-laser-line:last-child { color:var(--cyan); } .mr-laser-action { opacity:0; transform:translateY(5px); transition:opacity .55s ease,transform .55s ease; } .mr-laser-action.is-visible { opacity:1; transform:translateY(0); }
+
+/* Persistent, programmatic blueprint map */
+.school-map { position:sticky; top:.75rem; z-index:10; width:min(1180px,100%); margin:0 auto; padding:.75rem 1rem .65rem; overflow:hidden; background:linear-gradient(135deg,rgba(5,24,38,.98),rgba(7,32,48,.96)); border:1px solid rgba(79,211,213,.42); box-shadow:0 14px 40px rgba(0,0,0,.42),inset 0 0 50px rgba(79,211,213,.025); }
+.school-map::before,.school-map::after { content:""; position:absolute; pointer-events:none; }
+.school-map::before { inset:5px; border:1px solid rgba(167,242,239,.1); }
+.school-map::after { top:0; right:24%; width:1px; height:100%; background:rgba(79,211,213,.12); }
+.school-map__heading { display:flex; align-items:end; justify-content:space-between; gap:1rem; position:relative; z-index:1; padding:0 .2rem .35rem; border-bottom:1px solid rgba(79,211,213,.2); }
+.school-map__heading h2 { margin:0; color:var(--cyan-soft); font-family:Consolas,"Courier New",monospace; font-size:clamp(.95rem,2vw,1.25rem); font-weight:600; letter-spacing:.09em; text-transform:uppercase; }
+.school-map__kicker,.school-map__subtitle { margin:0; font-family:Consolas,"Courier New",monospace; font-size:.62rem; line-height:1.4; letter-spacing:.12em; text-transform:uppercase; }
+.school-map__kicker { color:var(--cyan); }
+.school-map__subtitle { color:var(--muted); text-align:right; }
+.school-map__viewport { position:relative; z-index:1; width:100%; overflow:hidden; }
+.school-map__drawing { display:block; width:100%; height:auto; max-height:min(58vh,520px); }
+.school-map__grid { opacity:.72; }
+.school-map__grid + * { pointer-events:none; }
+#school-map-grid path { fill:none; stroke:rgba(79,211,213,.055); stroke-width:1; }
+.school-map__building-outline { fill:rgba(3,15,25,.46); stroke:rgba(167,242,239,.34); stroke-width:9; stroke-linejoin:miter; }
+.school-map__technical path { fill:none; stroke:rgba(79,211,213,.22); stroke-width:1.5; }
+.school-map__technical text,.map-section__label { fill:rgba(167,242,239,.46); font-family:Consolas,"Courier New",monospace; font-size:11px; font-weight:700; letter-spacing:2px; }
+.map-section__label { font-size:10px; }
+.map-connection { fill:none; stroke:rgba(79,211,213,.8); stroke-width:5; }
+.map-door path { fill:none; stroke-linecap:square; }
+.map-door__opening { stroke:#071d2a; stroke-width:12; }
+.map-door__leaf { stroke:rgba(167,242,239,.92); stroke-width:2.5; }
+.map-door--architectural .map-door__leaf { stroke:rgba(101,139,151,.78); }
+.map-room { outline:none; }
+.map-room__surface { fill:rgba(8,29,44,.92); stroke:rgba(79,211,213,.86); stroke-width:4; transition:fill .45s ease,stroke .45s ease,filter .45s ease; }
+.map-room__corner { fill:none; stroke:var(--cyan-soft); stroke-width:3; }
+.map-room__icon { fill:none; stroke:var(--cyan-soft); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; opacity:.82; }
+.map-room__label,.map-room__unknown { fill:var(--text); font-family:Consolas,"Courier New",monospace; font-size:16px; font-weight:700; letter-spacing:1.3px; text-transform:uppercase; }
+.map-room__unknown { fill:#526773; font-size:22px; letter-spacing:5px; }
+.map-room--unbekannt .map-room__surface,.map-room--verschlossen .map-room__surface { fill:rgba(3,12,20,.94); stroke:rgba(84,112,123,.62); }
+.map-room--corridor .map-room__surface { fill:rgba(10,42,57,.96); stroke:rgba(79,211,213,.76); stroke-width:4; }
+.map-room--corridor .map-room__icon { opacity:.55; }
+.map-room--corridor .map-room__label { font-size:18px; letter-spacing:3px; }
+.map-room--current .map-room__surface { filter:drop-shadow(0 0 9px rgba(79,211,213,.28)); }
+.map-room--mr-laser .map-room__surface { stroke-dasharray:10 5; }
+.map-room--abgeschlossen .map-room__surface { fill:rgba(16,57,52,.72); stroke:#66d299; }
+.map-architecture-space .map-room__surface { stroke-width:3; }
+.map-architecture-corridor rect { fill:rgba(9,37,51,.78); stroke:rgba(79,211,213,.38); stroke-width:3; }
+.map-architecture-corridor text { fill:rgba(167,242,239,.38); font-family:Consolas,"Courier New",monospace; font-size:11px; font-weight:700; letter-spacing:2px; }
+.map-room:focus-visible .map-room__surface { stroke:#fff; stroke-width:4; }
+.map-marker { filter:drop-shadow(0 0 7px rgba(255,255,255,.2)); }
+.map-marker circle { stroke-width:3; }
+.map-marker path { fill:none; stroke-width:2.2; stroke-linecap:round; }
+.map-marker--player circle { fill:#66d299; stroke:#d8ffe9; }
+.map-marker--player path { stroke:#082a20; }
+.map-marker--laser circle { fill:var(--cyan); stroke:var(--cyan-soft); }
+.map-marker--laser text { fill:#05212a; font-family:Consolas,"Courier New",monospace; font-size:11px; font-weight:800; letter-spacing:-.04em; }
+.map-room__lock rect { fill:#24333d; stroke:#718691; }
+.map-room__lock path { fill:none; stroke:#718691; stroke-width:2; }
+.map-room__check circle { fill:#173f35; stroke:#66d299; stroke-width:2; }
+.map-room__check path { fill:none; stroke:#baf5d4; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+.school-map__legend { display:flex; flex-wrap:wrap; gap:.55rem 1.15rem; position:relative; z-index:1; padding:.38rem .2rem 0; color:var(--muted); font-family:Consolas,"Courier New",monospace; font-size:.62rem; letter-spacing:.05em; text-transform:uppercase; }
+.school-map__legend span { display:inline-flex; align-items:center; gap:.35rem; white-space:nowrap; }
+.legend-marker { width:34px; height:34px; flex:none; overflow:visible; }
+.legend-status { width:32px; height:28px; flex:none; overflow:visible; }
+.legend-status .map-room__surface { vector-effect:non-scaling-stroke; }
+.legend-status .map-room__unknown { font-size:15px; letter-spacing:0; }
+.legend-status .map-room__check circle { vector-effect:non-scaling-stroke; }
+.map-room.is-just-revealed .map-room__surface { animation:map-room-reveal .7s ease-out; }
+.map-room.is-just-revealed .map-room__label { animation:map-label-reveal .9s ease-out both; }
+.map-room.is-just-completed .map-room__check { animation:map-complete .65s ease-out both; transform-box:fill-box; transform-origin:center; }
+.map-connection.is-just-revealed { animation:map-connection-reveal .8s ease-out both; }
+@keyframes map-room-reveal { 0% { opacity:.3; filter:drop-shadow(0 0 16px var(--cyan)); } 100% { opacity:1; } }
+@keyframes map-label-reveal { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+@keyframes map-complete { 0% { opacity:0; transform:scale(.4); } 65% { transform:scale(1.15); } 100% { opacity:1; transform:scale(1); } }
+@keyframes map-connection-reveal { from { opacity:0; stroke-dashoffset:60; } to { opacity:1; stroke-dashoffset:0; } }
+@media (prefers-reduced-motion: reduce) { .boot-sequence,.boot-line,.boot-sequence.is-complete,.map-room.is-just-revealed .map-room__surface,.map-room.is-just-revealed .map-room__label,.map-room.is-just-completed .map-room__check,.map-connection.is-just-revealed { animation:none; } }
+@media (max-width:720px) { .school-map { top:.35rem; padding:.6rem .7rem .5rem; } .school-map__heading { align-items:start; } .school-map__subtitle { display:none; } .school-map__drawing { max-height:340px; } }
+@media (max-width:540px) { .app-shell { padding:.5rem; } .screen-panel { padding:1.5rem; } .actions .button { width:100%; } .school-map__legend { gap:.35rem .7rem; } }
+
+/* Presentation-only cinematic title shown once per full page load. */
+.app-shell:has(> .cinematic-start) { width:100%; max-width:none; min-height:100vh; padding:0; }
+.cinematic-start { position:fixed; inset:0; z-index:1000; overflow:hidden; cursor:pointer; background:#03111b; opacity:1; transition:opacity .5s ease; }
+.cinematic-start::after { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(circle at center,transparent 45%,rgba(1,8,14,.22) 100%); }
+.cinematic-start__image { display:block; width:100%; height:100%; object-fit:cover; object-position:center; animation:cinematic-start-reveal 1.2s ease-out both; }
+.cinematic-start.is-leaving { opacity:0; pointer-events:none; }
+.cinematic-start:focus-visible { outline:2px solid var(--cyan); outline-offset:-5px; }
+.cinematic-start--scene { cursor:default; }
+.cinematic-start--slogan .cinematic-start__image { object-position:85% 72%; transform:scale(2.35); transform-origin:85% 72%; animation:cinematic-slogan-reveal .8s ease-out both; }
+.cinematic-start__skip { position:absolute; right:clamp(1rem,3vw,2.5rem); bottom:clamp(1rem,3vw,2rem); z-index:2; padding:.45rem .7rem; border:1px solid rgba(123,224,221,.3); border-radius:3px; color:rgba(218,255,251,.78); background:rgba(3,17,27,.58); font:600 .72rem/1.2 Inter,"Segoe UI",sans-serif; letter-spacing:.08em; cursor:pointer; backdrop-filter:blur(5px); }
+.cinematic-start__skip:hover,.cinematic-start__skip:focus-visible { color:#fff; border-color:var(--cyan); background:rgba(3,17,27,.82); }
+.visually-hidden { position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@keyframes cinematic-start-reveal { from { opacity:.35; transform:scale(1.008); } to { opacity:1; transform:scale(1); } }
+@keyframes cinematic-slogan-reveal { from { opacity:.35; transform:scale(2.37); } to { opacity:1; transform:scale(2.35); } }
+@media (max-width:900px) { .cinematic-start__image { object-position:center center; } }
+@media (max-width:900px) { .cinematic-start--slogan .cinematic-start__image { object-position:82% 72%; transform:scale(2.8); transform-origin:82% 72%; } }
+@media (prefers-reduced-motion:reduce) { .cinematic-start,.cinematic-start__image { animation:none; transition:none; } }
+
+/* Greenville campus-plan visual pass */
+.school-map { padding:.9rem 1rem .7rem; isolation:isolate; background:radial-gradient(circle at 17% 0%,rgba(36,104,118,.2),transparent 30%),linear-gradient(135deg,rgba(4,20,32,.99),rgba(7,34,49,.97) 54%,rgba(3,18,29,.99)); border-color:rgba(114,222,221,.48); box-shadow:0 18px 55px rgba(0,0,0,.5),inset 0 0 70px rgba(79,211,213,.045); }
+.school-map::before { border-color:rgba(167,242,239,.12); clip-path:polygon(0 0,100% 0,100% 82%,98.5% 100%,0 100%); }
+.school-map::after { background:linear-gradient(transparent,rgba(79,211,213,.18),transparent); }
+.school-map__heading { display:grid; grid-template-columns:44px minmax(0,1fr) minmax(92px,148px) auto; align-items:center; padding:.05rem .25rem .55rem; border-bottom-color:rgba(79,211,213,.26); }
+.school-map__emblem { width:36px; height:42px; color:#bceae4; opacity:.78; }
+.school-map__emblem svg { display:block; width:100%; height:100%; fill:rgba(12,51,61,.54); stroke:currentColor; stroke-width:1.5; }
+.school-map__header-plan { align-self:stretch; min-width:0; padding:.12rem .7rem 0; color:rgba(174,231,226,.48); }
+.school-map__header-plan svg { display:block; width:100%; height:100%; min-height:34px; fill:none; stroke:currentColor; stroke-width:1.1; }
+.school-map__stamp { display:grid; gap:.12rem; min-width:110px; padding:.3rem .42rem; border:1px solid rgba(162,227,223,.36); color:rgba(203,248,243,.73); font-family:Consolas,"Courier New",monospace; font-size:.52rem; letter-spacing:.12em; line-height:1.25; text-align:right; text-transform:uppercase; }
+.school-map__stamp strong { color:#c9f7f1; font-size:.58rem; font-weight:700; }
+.school-map__masthead { position:relative; padding-left:.85rem; }
+.school-map__masthead::before { content:""; position:absolute; top:.15rem; bottom:.12rem; left:0; width:3px; background:var(--cyan); box-shadow:0 0 10px rgba(79,211,213,.65); }
+.school-map__heading h2 { color:#e5ffff; font-family:"Trebuchet MS",Inter,"Segoe UI",sans-serif; font-size:clamp(1.15rem,2.5vw,1.65rem); font-weight:800; letter-spacing:.13em; line-height:1; text-shadow:0 0 16px rgba(79,211,213,.25); }
+.school-map__kicker,.school-map__subtitle { font-family:Inter,"Segoe UI",sans-serif; letter-spacing:.16em; }
+.school-map__kicker { font-weight:700; }
+.school-map__subtitle { color:#9bb4bb; }
+.school-map__viewport { margin-top:.1rem; }
+.school-map__drawing { background:linear-gradient(115deg,rgba(12,40,52,.32),transparent 42%,rgba(0,0,0,.12)); }
+.school-map__grid { opacity:.82; }
+.school-map__grid-major { opacity:.82; }
+#school-map-grid path { stroke:rgba(105,217,219,.055); }
+#school-map-grid-major path { fill:none; stroke:rgba(105,217,219,.09); stroke-width:1; }
+#school-map-floor path { fill:none; stroke:rgba(151,230,226,.09); stroke-width:1; }
+.school-map__building-outline { fill:rgba(2,14,24,.6); stroke:rgba(190,251,247,.58); stroke-width:10; filter:drop-shadow(0 0 5px rgba(79,211,213,.12)); }
+.school-map__frame path { fill:none; stroke:rgba(103,219,218,.26); stroke-width:1.5; }
+.school-map__frame text { fill:rgba(179,241,237,.54); font-family:Inter,"Segoe UI",sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; }
+.map-connection { stroke:rgba(132,245,239,.65); stroke-width:3; filter:none; }
+.map-blueprint__dimensions path,.map-blueprint__titleblock path { fill:none; stroke:rgba(166,226,224,.34); stroke-width:1; }
+.map-blueprint__dimensions text,.map-blueprint__titleblock text { fill:rgba(182,234,231,.48); font-family:Inter,"Segoe UI",sans-serif; font-size:8px; font-weight:700; letter-spacing:1.35px; }
+.map-blueprint__windows path { fill:none; stroke:rgba(193,247,242,.4); stroke-width:4; }
+.map-blueprint__compass circle { fill:rgba(5,23,33,.68); stroke:rgba(166,226,224,.38); stroke-width:1; }
+.map-blueprint__compass path { fill:none; stroke:rgba(187,241,237,.55); stroke-width:1.2; }
+.map-blueprint__compass text { fill:rgba(187,241,237,.65); font-family:Inter,"Segoe UI",sans-serif; font-size:8px; font-weight:800; }
+.map-door__opening { stroke:#071a25; stroke-width:17; }
+.map-door__leaf { stroke:rgba(184,222,224,.82); stroke-width:2; }
+.map-door__handle { fill:#b7e6e4; stroke:#071a25; stroke-width:1; }
+.map-door--architectural .map-door__leaf { stroke:rgba(118,154,163,.78); }
+.map-door--architectural .map-door__handle { fill:#78939c; }
+.map-room__wall { fill:#061923; stroke:rgba(188,224,223,.74); stroke-width:7; }
+.map-room__surface { fill:rgba(11,35,47,.98); stroke:none; }
+.map-room__floor { fill:url(#school-map-floor); opacity:.72; pointer-events:none; }
+.map-room__inner-wall { fill:none; stroke:rgba(124,168,172,.42); stroke-width:1.5; }
+.map-room__wall-detail { fill:none; stroke:rgba(169,220,218,.16); stroke-width:1; }
+.map-room__icon-plate rect { fill:rgba(7,31,42,.74); stroke:rgba(172,236,232,.28); stroke-width:1; }
+.map-room__title-rule { fill:none; stroke:rgba(177,247,243,.42); stroke-width:1.5; }
+.map-room__circulation { fill:none; stroke:rgba(198,255,250,.16); stroke-width:1; stroke-dasharray:8 12; }
+.map-room__corner { stroke:#d7ffff; }
+.map-room__icon { stroke:#bffaf6; opacity:.9; }
+.map-room__label,.map-room__unknown { fill:#efffff; font-family:Inter,"Segoe UI",sans-serif; font-size:15px; font-weight:800; letter-spacing:1.6px; paint-order:stroke; stroke:#082230; stroke-width:4px; stroke-linejoin:round; }
+.map-room__unknown { fill:#7c949e; font-size:22px; stroke:none; }
+.map-room--unbekannt .map-room__wall,.map-room--verschlossen .map-room__wall { fill:#07121a; stroke:rgba(101,127,137,.64); }
+.map-room--unbekannt .map-room__surface,.map-room--verschlossen .map-room__surface { fill:rgba(4,14,22,.98); }
+.map-room--unbekannt .map-room__floor,.map-room--verschlossen .map-room__floor { opacity:.3; }
+.map-room--abgeschlossen .map-room__wall { stroke:#66d299; }
+.map-room--abgeschlossen .map-room__surface { fill:rgba(13,42,39,.98); }
+.map-room--corridor .map-room__wall { fill:#071e29; stroke:rgba(137,188,190,.7); }
+.map-room--corridor .map-room__surface { fill:rgba(12,45,57,.96); }
+.map-room--corridor .map-room__floor { opacity:.48; }
+.map-room--corridor .map-room__label { font-size:15px; letter-spacing:4px; }
+.map-room--current .map-room__wall { stroke:rgba(111,223,218,.92); }
+.map-room--current .map-room__surface { filter:none; }
+.map-room--mr-laser .map-room__wall { stroke-dasharray:8 4; }
+.map-architecture-corridor .map-architecture-corridor__wall { fill:#071e29; stroke:rgba(126,174,178,.68); stroke-width:6; }
+.map-architecture-corridor .map-architecture-corridor__surface { fill:rgba(12,45,57,.96); stroke:none; }
+.map-architecture-corridor__floor { fill:url(#school-map-floor) !important; opacity:.65; stroke:none !important; }
+.map-architecture-corridor__centreline { fill:none; stroke:rgba(192,247,243,.22); stroke-width:1.5; stroke-dasharray:7 8; }
+.map-architecture-corridor text { fill:rgba(194,248,244,.48); font-family:Inter,"Segoe UI",sans-serif; font-weight:800; }
+.map-marker { filter:drop-shadow(0 0 8px rgba(255,255,255,.24)); }
+.map-marker--player .map-marker__halo { fill:#13513e; stroke:#baf5d4; stroke-width:1.5; }
+.map-marker--player .map-marker__disc { fill:#66d299; stroke:#e5fff0; stroke-width:1.5; }
+.map-marker--player .map-marker__person { fill:none; stroke:#062a20; stroke-width:2; stroke-linecap:round; }
+.map-marker--player .map-marker__pointer { fill:#66d299; stroke:#e5fff0; stroke-width:1.2; stroke-linejoin:round; }
+.map-marker--laser .map-marker__halo { fill:#0e4353; stroke:#c4fffb; stroke-width:1.5; }
+.map-marker--laser .map-marker__head { fill:#d8ffff; stroke:#063441; stroke-width:1.5; }
+.map-marker--laser .map-marker__orbit,.map-marker--laser .map-marker__body,.map-marker--laser .map-marker__glasses { fill:none; stroke:#d5ffff; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.map-marker--laser .map-marker__beam { fill:none; stroke:#4fd3d5; stroke-width:2.5; stroke-linecap:round; }
+.map-room__fixtures rect { fill:rgba(16,55,67,.78); stroke:rgba(145,207,205,.38); stroke-width:1.2; }
+.map-room__fixtures path,.map-room__fixtures circle { fill:none; stroke:rgba(180,239,235,.48); stroke-width:1.4; stroke-linecap:round; }
+.school-map__legend { gap:.3rem .75rem; margin-top:.25rem; padding:.45rem .2rem 0; border-top:1px solid rgba(79,211,213,.18); color:#aac2c7; font-family:Inter,"Segoe UI",sans-serif; font-weight:700; letter-spacing:.07em; }
+.school-map__legend span { gap:.26rem; padding:.12rem .32rem; border:1px solid rgba(112,196,197,.14); background:rgba(3,17,27,.28); }
+.legend-marker { width:27px; height:27px; }
+.legend-status { width:25px; height:23px; }
+@media (max-width:720px) { .school-map__heading { grid-template-columns:37px minmax(0,1fr) auto; } .school-map__emblem { width:31px; height:37px; } .school-map__header-plan { display:none; } .school-map__stamp { min-width:94px; font-size:.48rem; } }
+@media (max-width:470px) { .school-map__heading { grid-template-columns:32px minmax(0,1fr); } .school-map__stamp { display:none; } .school-map__emblem { width:27px; height:32px; } .school-map__masthead { padding-left:.6rem; } .school-map__heading h2 { font-size:1rem; letter-spacing:.1em; } }
+
+/* Single-sheet Greenville archival blueprint composition */
+.school-map { position:relative; top:auto; width:min(1240px,100%); margin:0 auto; padding:0; overflow:visible; isolation:auto; background:none; border:0; box-shadow:none; }
+.school-map::before,.school-map::after { display:none; }
+.blueprint-sheet { display:block; width:100%; height:auto; max-height:none; overflow:visible; background:#061722; font-family:Consolas,"Courier New",monospace; }
+.blueprint-background > rect:first-child { fill:#071b28; }
+.blueprint-background__edge,.blueprint-background__notches { fill:none; stroke:rgba(191,236,228,.33); stroke-width:1; }
+.blueprint-background__notches { stroke-width:2; }
+.blueprint-header__rule,.blueprint-technical-frame path { fill:none; stroke:rgba(180,232,225,.42); stroke-width:1.2; }
+.blueprint-header__crest path { fill:rgba(13,53,62,.58); stroke:rgba(197,242,234,.76); stroke-width:1.45; }
+.blueprint-header__crest text { fill:#d4fbf2; font-size:9px; font-weight:800; letter-spacing:1px; }
+.blueprint-header__title { fill:#e2fff7; font-family:Inter,"Segoe UI",sans-serif; font-size:27px; font-weight:800; letter-spacing:3.4px; }
+.blueprint-header__subtitle { fill:#8ee1df; font-size:12px; font-weight:700; letter-spacing:2.1px; }
+.blueprint-header__index { fill:rgba(188,232,226,.58); font-size:8px; font-weight:700; letter-spacing:1.25px; }
+.blueprint-header__building { fill:none; stroke:rgba(170,225,219,.56); stroke-width:1.1; }
+.blueprint-header__building text { fill:rgba(187,233,226,.55); stroke:none; font-size:6px; font-weight:700; letter-spacing:1px; }
+.blueprint-header__stamp rect,.blueprint-header__stamp path { fill:rgba(5,25,35,.56); stroke:rgba(193,239,232,.54); stroke-width:1; }
+.blueprint-header__stamp text { fill:#c9f2ea; stroke:none; font-size:7px; font-weight:700; letter-spacing:.8px; }
+.blueprint-technical-frame text { fill:rgba(182,233,226,.58); font-size:8px; font-weight:700; letter-spacing:1.4px; }
+.blueprint-floorplan .school-map__building-outline { fill:rgba(6,28,38,.76); stroke:rgba(214,244,235,.74); stroke-width:8; filter:none; }
+.blueprint-floorplan .map-room__wall { fill:#0b2833; stroke:rgba(208,236,228,.76); stroke-width:6; }
+.blueprint-floorplan .map-room__surface { fill:rgba(14,45,56,.92); }
+.blueprint-floorplan .map-room__floor { opacity:.5; }
+.blueprint-floorplan .map-room__inner-wall { stroke:rgba(188,223,216,.38); }
+.blueprint-floorplan .map-room__wall-detail { stroke:rgba(194,229,219,.24); }
+.blueprint-floorplan .map-room__corner { stroke:rgba(219,250,241,.72); stroke-width:1.5; }
+.blueprint-floorplan .map-room__icon-plate rect { fill:rgba(8,35,44,.6); stroke:rgba(190,235,227,.4); }
+.blueprint-floorplan .map-room__icon { stroke:#c9faf1; }
+.blueprint-floorplan .map-room__fixtures rect { fill:rgba(14,52,61,.45); stroke:rgba(188,230,220,.48); }
+.blueprint-floorplan .map-room__fixtures path,.blueprint-floorplan .map-room__fixtures circle { stroke:rgba(205,243,233,.62); }
+.blueprint-floorplan .map-room__label { fill:#e0fcf3; font-family:Consolas,"Courier New",monospace; font-size:14px; letter-spacing:1.2px; stroke:#0a2631; }
+.blueprint-floorplan .map-room__unknown { fill:#82969d; font-family:Consolas,"Courier New",monospace; }
+.blueprint-floorplan .map-room--entdeckt .map-room__wall,.blueprint-legend .map-room--entdeckt { stroke:#69dcdb; }
+.blueprint-floorplan .map-room--abgeschlossen .map-room__wall { stroke:#69d69d; }
+.blueprint-floorplan .map-room--abgeschlossen .map-room__surface { fill:rgba(16,52,45,.76); }
+.blueprint-floorplan .map-room--unbekannt .map-room__wall,.blueprint-floorplan .map-room--verschlossen .map-room__wall { fill:#091923; stroke:rgba(117,139,146,.65); }
+.blueprint-floorplan .map-room--unbekannt .map-room__surface,.blueprint-floorplan .map-room--verschlossen .map-room__surface { fill:rgba(8,21,29,.88); }
+.blueprint-floorplan .map-room--corridor .map-room__wall,.blueprint-floorplan .map-architecture-corridor .map-architecture-corridor__wall { fill:#0a2a35; stroke:rgba(182,225,219,.64); }
+.blueprint-floorplan .map-room--corridor .map-room__surface,.blueprint-floorplan .map-architecture-corridor .map-architecture-corridor__surface { fill:rgba(12,49,61,.8); }
+.blueprint-floorplan .map-door__opening { stroke:#0a2631; }
+.blueprint-floorplan .map-door__leaf { stroke:rgba(214,242,232,.82); }
+.blueprint-floorplan .map-door__handle { fill:#c6eee5; stroke:#0a2631; }
+.blueprint-floorplan .map-connection { stroke:#79dfdc; stroke-width:2.5; }
+.blueprint-floorplan .map-section__label,.blueprint-floorplan .map-architecture-corridor text { fill:rgba(195,236,227,.54); font-family:Consolas,"Courier New",monospace; font-size:8px; letter-spacing:1.4px; }
+.blueprint-floorplan .map-blueprint__dimensions text { font-family:Consolas,"Courier New",monospace; }
+.blueprint-orientation circle { fill:#092330; stroke:rgba(199,242,233,.58); }
+.blueprint-orientation path { stroke:rgba(207,244,235,.7); }
+.blueprint-orientation text { fill:#d2f8ef; }
+.blueprint-legend__frame { fill:rgba(5,24,34,.72); stroke:rgba(193,238,229,.5); stroke-width:1; }
+.blueprint-legend__title { fill:#d6faf1; font-size:10px; font-weight:800; letter-spacing:1.7px; }
+.blueprint-legend__note { fill:rgba(181,229,220,.55); font-size:6.5px; font-weight:700; letter-spacing:1px; }
+.blueprint-legend__item > text { fill:#c8eee5; font-size:8px; font-weight:700; letter-spacing:.65px; }
+.blueprint-legend .legend-status.map-room--entdeckt { fill:rgba(17,59,68,.72); stroke-width:2; }
+.blueprint-legend .map-room__check circle { fill:rgba(25,82,61,.75); stroke:#69d69d; }
+.blueprint-legend .map-room__check path { stroke:#d8ffea; }
+.blueprint-legend .map-room__lock rect,.blueprint-legend .map-room__lock path { fill:none; stroke:#a9bbc0; }
+.blueprint-legend .map-room__unknown { font-size:13px; fill:#95a6aa; }
+.blueprint-legend .map-marker { filter:none; }
+.blueprint-legend .map-marker--player .map-marker__halo { fill:#164d3d; }
+.blueprint-legend .map-marker--laser .map-marker__halo { fill:#0c4050; }
+@media (max-width:720px) { .school-map { width:100%; } .blueprint-sheet { max-height:none; } }
+
+/* Reference-sheet proportions: the architectural drawing remains dominant. */
+.blueprint-sheet { background:#061723; }
+.blueprint-header--reference .blueprint-header__title { fill:#eefaf3; font-family:"Arial Narrow",Impact,Inter,sans-serif; font-size:44px; font-stretch:condensed; letter-spacing:2.6px; paint-order:stroke; stroke:rgba(7,25,34,.72); stroke-width:1.4px; }
+.blueprint-header--reference .blueprint-header__subtitle { fill:#10c9d3; font-size:17px; letter-spacing:3px; }
+.blueprint-header--reference .blueprint-header__index { font-size:7px; letter-spacing:1.7px; }
+.blueprint-header--reference .blueprint-header__crest path { fill:rgba(10,39,53,.8); stroke:rgba(221,244,237,.85); stroke-width:1.5; }
+.blueprint-header--reference .blueprint-header__crest text { fill:#edfdf4; font-size:10px; }
+.blueprint-header--reference .blueprint-header__crest .blueprint-header__motto { fill:rgba(204,231,222,.7); font-size:5.5px; letter-spacing:.75px; }
+.blueprint-header--reference .blueprint-header__building { stroke:rgba(164,208,205,.62); stroke-width:1; }
+.blueprint-header--reference .blueprint-header__building text { font-size:5.8px; letter-spacing:.8px; }
+.blueprint-header--reference .blueprint-header__stamp rect { fill:rgba(5,22,32,.72); stroke:rgba(183,222,216,.45); }
+.blueprint-header--reference .blueprint-header__stamp text { fill:rgba(211,236,228,.75); font-size:8px; letter-spacing:1px; }
+.blueprint-technical-frame:not(.blueprint-technical-frame--reference) { display:none; }
+.blueprint-technical-frame--reference text { font-size:8px; letter-spacing:1.3px; }
+.blueprint-floorplan .school-map__building-outline { stroke:rgba(235,244,235,.88); stroke-width:7; }
+.blueprint-floorplan .map-room__wall { stroke:rgba(227,239,232,.84); stroke-width:5.5; }
+.blueprint-floorplan .map-room__inner-wall { stroke:rgba(210,227,219,.46); stroke-width:1.15; }
+.blueprint-floorplan .map-room__surface { fill:rgba(10,35,46,.9); }
+.blueprint-floorplan .map-room__floor { opacity:.38; }
+.blueprint-floorplan .map-room__wall-detail { stroke:rgba(211,235,223,.22); }
+.blueprint-floorplan .map-room--entdeckt .map-room__wall { stroke:#48d8da; }
+.blueprint-floorplan .map-room--current .map-room__wall { stroke:#65e0d8; }
+.blueprint-floorplan .map-room--abgeschlossen .map-room__wall { stroke:#78dd94; }
+.blueprint-floorplan .map-room--abgeschlossen .map-room__surface { fill:rgba(17,49,38,.74); }
+.blueprint-floorplan .map-room__label { font-size:13px; letter-spacing:1.5px; }
+.blueprint-floorplan .map-room__unknown { font-size:22px; fill:#9aa8ac; }
+.blueprint-floorplan .map-connection { stroke:#59dce0; stroke-width:2; }
+.blueprint-floorplan .map-door__opening { stroke:#0b2530; stroke-width:15; }
+.blueprint-floorplan .map-door__leaf { stroke:#ecf6ef; stroke-width:1.4; }
+.blueprint-floorplan .map-door__handle { fill:#eaf7ef; }
+.blueprint-floorplan .map-room__fixtures rect { fill:rgba(15,48,60,.35); stroke:rgba(195,230,223,.4); }
+.blueprint-floorplan .map-room__fixtures path,.blueprint-floorplan .map-room__fixtures circle { stroke:rgba(206,240,231,.55); }
+.blueprint-staircase rect { fill:rgba(7,24,34,.82); stroke:rgba(214,237,228,.72); stroke-width:1.4; }
+.blueprint-staircase path { fill:none; stroke:rgba(207,232,223,.67); stroke-width:1.1; }
+.blueprint-annotations__scale path,.blueprint-annotations__science path,.blueprint-annotations__science circle,.blueprint-annotations__compass circle,.blueprint-annotations__compass path,.blueprint-annotations__corner { fill:none; stroke:rgba(160,205,205,.47); stroke-width:1.1; }
+.blueprint-annotations__scale text,.blueprint-annotations__compass text { fill:rgba(177,217,213,.72); font-size:9px; letter-spacing:.7px; }
+.blueprint-annotations__science { fill:none; stroke:rgba(145,195,196,.36); stroke-width:1; }
+.blueprint-legend--reference .blueprint-legend__frame { fill:rgba(5,22,31,.82); stroke:rgba(192,225,218,.46); }
+.blueprint-legend--reference .blueprint-legend__divider { fill:none; stroke:rgba(164,209,204,.23); stroke-width:1; }
+.blueprint-legend--reference .blueprint-legend__title { font-size:13px; letter-spacing:2px; }
+.blueprint-legend--reference .blueprint-legend__item > text { font-size:9px; letter-spacing:.8px; fill:#d1ece4; }
+.blueprint-legend--reference .blueprint-legend__description { fill:rgba(183,215,209,.68) !important; font-size:7px !important; font-weight:400 !important; letter-spacing:.3px !important; }
+.blueprint-legend--reference .map-room__unknown { font-size:19px; }
+.map-marker--player .map-marker__halo { stroke:#c4ffd2; stroke-width:1.25; }
+.map-marker--player .map-marker__disc { fill:#79db41; stroke:#e7ffd3; }
+.map-marker--player .map-marker__pointer { fill:#79db41; stroke:#e7ffd3; }
+.map-marker--laser .map-marker__halo { fill:#063447; stroke:#45dbe0; stroke-width:1.5; }
+.map-marker--laser .map-marker__medallion { fill:#082b3a; stroke:rgba(205,249,243,.72); stroke-width:1; }
+.map-marker--laser .map-marker__head { fill:#d99b6d; stroke:#4a2b24; stroke-width:1; }
+.map-marker--laser .map-marker__hair { fill:#19242b; stroke:#0b151b; stroke-width:.8; }
+.map-marker--laser .map-marker__glasses,.map-marker--laser .map-marker__smile { fill:none; stroke:#effcf2; stroke-width:1.1; stroke-linecap:round; stroke-linejoin:round; }
+.map-marker--laser .map-marker__shirt { fill:#f0f5ed; stroke:#183744; stroke-width:1; }
+.map-marker--laser .map-marker__collar { fill:none; stroke:#1c4d60; stroke-width:1.2; }
+.map-marker--laser .map-marker__tie { fill:#3bc9d1; stroke:#093b4c; stroke-width:.7; }
+.map-marker--laser .map-marker__beam { stroke:#56dce0; stroke-width:1.5; }
+
+/* Static reference image with a state-driven transparent SVG overlay. */
+.school-map__reference-sheet { display:block; width:100%; height:auto; max-height:none; background:#061723; }
+.school-map__reference-image { display:block; pointer-events:none; }
+.school-map__reference-sheet .blueprint-background,.school-map__reference-sheet .blueprint-header,.school-map__reference-sheet .blueprint-technical-frame,.school-map__reference-sheet .blueprint-floorplan,.school-map__reference-sheet .blueprint-annotations,.school-map__reference-sheet .blueprint-legend { display:none; }
+.school-map__dynamic-layer .school-map__building-outline,.school-map__dynamic-layer .map-section__label,.school-map__dynamic-layer .map-architecture-corridor__wall,.school-map__dynamic-layer .map-architecture-corridor__surface,.school-map__dynamic-layer .map-architecture-corridor__floor,.school-map__dynamic-layer .map-architecture-corridor__centreline,.school-map__dynamic-layer .map-architecture-corridor text,.school-map__dynamic-layer .map-connection,.school-map__dynamic-layer .map-door { display:none; }
+.school-map__dynamic-layer .map-room__wall,.school-map__dynamic-layer .map-room__floor,.school-map__dynamic-layer .map-room__inner-wall,.school-map__dynamic-layer .map-room__wall-detail,.school-map__dynamic-layer .map-room__corner,.school-map__dynamic-layer .map-room__title-rule,.school-map__dynamic-layer .map-room__circulation,.school-map__dynamic-layer .map-room__icon-plate,.school-map__dynamic-layer .map-room__fixtures,.school-map__dynamic-layer .map-room__label { display:none; }
+.school-map__dynamic-layer .map-room__surface { fill:transparent !important; stroke:none !important; opacity:1; pointer-events:all; }
+.school-map__dynamic-layer .map-room--unbekannt .map-room__surface,.school-map__dynamic-layer .map-room--verschlossen .map-room__surface { fill:#071923 !important; }
+.school-map__dynamic-layer .map-room--entdeckt .map-room__wall,.school-map__dynamic-layer .map-room--current .map-room__wall { display:block; fill:none; pointer-events:none; }
+.school-map__dynamic-layer .map-room--entdeckt .map-room__wall,.school-map__dynamic-layer .map-room--current .map-room__wall { stroke:#48d8da; stroke-width:3; }
+.school-map__dynamic-layer .map-room--abgeschlossen .map-room__wall { display:none; }
+.school-map__dynamic-layer .map-room__unknown { fill:#aebcc0; font-family:Consolas,"Courier New",monospace; font-size:23px; font-weight:800; paint-order:stroke; stroke:#071924; stroke-width:3px; }
+.school-map__dynamic-layer .map-room__lock rect,.school-map__dynamic-layer .map-room__lock path { fill:#263740; stroke:#aab9bd; stroke-width:1.3; }
+.school-map__dynamic-layer .map-room__check circle { fill:#123e2c; stroke:#78dd94; stroke-width:2; }
+.school-map__dynamic-layer .map-room__check path { fill:none; stroke:#e2ffe7; stroke-width:2; }
+.school-map__dynamic-layer .map-marker { filter:drop-shadow(0 1px 3px rgba(0,0,0,.7)); }
+.school-map__dynamic-layer--status-only .map-room__status-plaque rect { fill:rgba(5,20,29,.96); stroke:rgba(137,188,190,.62); stroke-width:1.5; }
+.school-map__dynamic-layer--status-only .map-room__unknown { fill:#d5e3e5; font-size:20px; letter-spacing:4px; stroke:#061720; stroke-width:3px; }
+.school-map__dynamic-layer--status-only .map-room__lock rect,.school-map__dynamic-layer--status-only .map-room__lock path { fill:#263740; stroke:#d0dadd; stroke-width:1.3; }
+.school-map__dynamic-layer--status-only .map-room__check circle { fill:rgba(18,62,44,.94); stroke:#8cff39; stroke-width:2; }
+.school-map__dynamic-layer--status-only .map-room__check path { fill:none; stroke:#edffe5; stroke-width:2; }

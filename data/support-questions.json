@@ -1,0 +1,176 @@
+[
+  {
+    "id": "follow-support-kraft-01", "path": "support", "reihenfolge": 1,
+    "titel": "Kraftmessung", "story": "Auf einer Notiz zur Versuchsreihe steht: Federkraftmesser: 4 N.",
+    "aufgabe": "Wofür steht das Einheitenzeichen N?", "hilfe": "Erinnerung: Eine Kraft wird mit einem Federkraftmesser gemessen.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "newton", "text": "Newton, die Einheit der Kraft" },
+      { "id": "joule", "text": "Joule, die Einheit der Energie" },
+      { "id": "watt", "text": "Watt, die Einheit der Leistung" },
+      { "id": "pascal", "text": "Pascal, die Einheit des Drucks" }
+    ],
+    "lösung": { "richtigeAntwort": "newton", "begründung": "N steht für Newton.", "erwartungshorizont": "Newton wird eindeutig der Größe Kraft zugeordnet." },
+    "thema": "Mechanik – Kraft", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Die Einheit Newton der Kraft zuordnen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Kräfte und Einheiten verwenden" },
+    "kompetenztags": ["mechanik", "kraft", "einheiten"], "diagnosetags": ["kraft-einheit"],
+    "fehlvorstellungen": [{ "id": "kraft-energie-verwechselt", "beschreibung": "Kraft wird mit Energie oder Leistung verwechselt." }],
+    "förderhinweise": ["Größe, Formelzeichen und Einheit in einer kleinen Tabelle ordnen."]
+  },
+  {
+    "id": "follow-support-geschwindigkeit-02", "path": "support", "reihenfolge": 2,
+    "titel": "Messwerte auf der Schiene", "story": "Im Protokoll stehen für den Versuchswagen die Messwerte: Weg: 6 m. Zeit: 1 s.",
+    "aufgabe": "Welche Geschwindigkeit wurde gemessen?", "hilfe": "Geschwindigkeit = Weg / Zeit.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "sechs", "text": "6 m/s" }, { "id": "fuenfzig", "text": "0,6 m/s" },
+      { "id": "sechzig", "text": "60 m/s" }, { "id": "sechshundert", "text": "600 m/s" }
+    ],
+    "lösung": { "richtigeAntwort": "sechs", "begründung": "6 m / 1 s = 6 m/s.", "erwartungshorizont": "Weg wird durch Zeit geteilt." },
+    "thema": "Mechanik – Bewegung", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Geschwindigkeit aus Weg und Zeit berechnen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Bewegungen quantitativ beschreiben" },
+    "kompetenztags": ["mechanik", "geschwindigkeit", "berechnung"], "diagnosetags": ["weg-durch-zeit"],
+    "fehlvorstellungen": [{ "id": "weg-mal-zeit", "beschreibung": "Weg und Zeit werden multipliziert." }],
+    "förderhinweise": ["Die Formulierung 'Meter pro Sekunde' vor dem Einsetzen sprechen lassen."]
+  },
+  {
+    "id": "follow-support-traegheit-03", "path": "support", "reihenfolge": 3,
+    "titel": "Der lose Kunststoffblock", "story": "Der Versuchswagen bewegt sich vorwärts und wird plötzlich gestoppt. Der lose Kunststoffblock bewegt sich zunächst weiter nach vorne.",
+    "aufgabe": "Warum bewegt sich der Kunststoffblock zunächst weiter?", "hilfe": "Körper behalten ihren Bewegungszustand zunächst bei.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "traegheit", "text": "Der Körper behält aufgrund seiner Trägheit zunächst seinen Bewegungszustand bei." },
+      { "id": "wagen-schiebt", "text": "Der Wagen schiebt den Körper beim Anhalten nach vorne." },
+      { "id": "gewicht-weg", "text": "Der Körper verliert beim Anhalten seine Gewichtskraft." },
+      { "id": "luft-zieht", "text": "Die Luft zieht den Körper nach vorne." }
+    ],
+    "lösung": { "richtigeAntwort": "traegheit", "begründung": "Der Körper behält seinen Bewegungszustand zunächst bei.", "erwartungshorizont": "Das Weiterbewegen wird mit Trägheit erklärt." },
+    "thema": "Mechanik – Trägheit", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Ein Alltagsphänomen mit Trägheit erklären.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Bewegungsänderungen erklären" },
+    "kompetenztags": ["mechanik", "traegheit"], "diagnosetags": ["bewegungszustand"],
+    "fehlvorstellungen": [{ "id": "kraft-nach-vorne", "beschreibung": "Eine zusätzliche Kraft nach vorne wird angenommen." }],
+    "förderhinweise": ["Wagen und Tasche vor und nach dem Anhalten getrennt beschreiben."]
+  },
+  {
+    "id": "follow-support-amperemeter-04", "path": "support", "reihenfolge": 4,
+    "titel": "Messgerät im Stromkreis", "story": "Auf dem Protokoll neben der Lampe steht: Stromstärke messen.",
+    "aufgabe": "Welches Messgerät wird dafür benötigt?", "hilfe": "Die Einheit der Stromstärke ist Ampere.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "amperemeter", "text": "Amperemeter" }, { "id": "voltmeter", "text": "Voltmeter" },
+      { "id": "thermometer", "text": "Thermometer" }, { "id": "kraftmesser", "text": "Federkraftmesser" }
+    ],
+    "lösung": { "richtigeAntwort": "amperemeter", "begründung": "Das Amperemeter misst die Stromstärke.", "erwartungshorizont": "Messgerät und elektrische Größe werden korrekt zugeordnet." },
+    "thema": "Elektrizitätslehre – Messen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Das Amperemeter der Stromstärke zuordnen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen messen" },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "messgeraete"], "diagnosetags": ["amperemeter"],
+    "fehlvorstellungen": [{ "id": "amperemeter-voltmeter", "beschreibung": "Amperemeter und Voltmeter werden verwechselt." }],
+    "förderhinweise": ["Messgröße, Einheit und Messgerät gemeinsam notieren."]
+  },
+  {
+    "id": "follow-support-ohm-05", "path": "support", "reihenfolge": 5,
+    "titel": "Ausgetauschter Widerstand", "story": "Im Aufbau wird bei gleicher Spannung ein Bauteil mit größerem Widerstand eingesetzt.",
+    "aufgabe": "Was geschieht dabei mit der Stromstärke?", "hilfe": "Ein größerer Widerstand behindert den Stromfluss stärker.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "kleiner", "text": "Die Stromstärke wird kleiner." }, { "id": "groesser", "text": "Die Stromstärke wird größer." },
+      { "id": "gleich", "text": "Die Stromstärke bleibt immer gleich." }, { "id": "verschwindet-spannung", "text": "Die Spannung verschwindet." }
+    ],
+    "lösung": { "richtigeAntwort": "kleiner", "begründung": "Bei gleicher Spannung führt größerer Widerstand zu kleinerer Stromstärke.", "erwartungshorizont": "Der qualitative Zusammenhang wird erkannt." },
+    "thema": "Elektrizitätslehre – Grundgrößen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Den qualitativen Zusammenhang von Spannung, Stromstärke und Widerstand beschreiben.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen verknüpfen" },
+    "kompetenztags": ["elektrizitaet", "spannung", "stromstaerke", "widerstand"], "diagnosetags": ["ohmscher-zusammenhang"],
+    "fehlvorstellungen": [{ "id": "mehr-widerstand-mehr-strom", "beschreibung": "Größerer Widerstand wird mit größerer Stromstärke verbunden." }],
+    "förderhinweise": ["Bei gleicher Spannung zwei Widerstände und zugehörige Stromstärken vergleichen."]
+  },
+  {
+    "id": "follow-support-energie-06", "path": "support", "reihenfolge": 6,
+    "titel": "Das warme Bauteil", "story": "Ein elektrisches Bauteil der Versuchsreihe wird während des Betriebs deutlich warm.",
+    "aufgabe": "Welche wesentliche Energieumwandlung findet hier statt?", "hilfe": "Achte auf die Energie am Anschluss und auf die Wärme am Bauteil.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "elektrisch-thermisch", "text": "elektrische Energie → thermische Energie" },
+      { "id": "thermisch-elektrisch", "text": "thermische Energie → elektrische Energie" },
+      { "id": "licht-chemisch", "text": "Lichtenergie → chemische Energie" },
+      { "id": "bewegung-licht", "text": "Bewegungsenergie → Lichtenergie" }
+    ],
+    "lösung": { "richtigeAntwort": "elektrisch-thermisch", "begründung": "Elektrische Energie wird vor allem in thermische Energie umgewandelt.", "erwartungshorizont": "Eingangs- und Nutzenergie werden korrekt benannt." },
+    "thema": "Energie – Umwandlung", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Eine Energieumwandlung an einem Alltagsgerät erkennen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Energieumwandlungen beschreiben" },
+    "kompetenztags": ["energie", "energieumwandlung", "alltagsgeraete"], "diagnosetags": ["energiekette"],
+    "fehlvorstellungen": [{ "id": "energie-richtung-vertauscht", "beschreibung": "Eingangs- und Ausgangsenergie werden vertauscht." }],
+    "förderhinweise": ["Am Gerät Energie vor und nach der Umwandlung markieren."]
+  },
+  {
+    "id": "follow-support-dichte-07", "path": "support", "reihenfolge": 7,
+    "titel": "Probe im Wasserbehälter", "story": "Ein Kunststoffkörper aus der Versuchsreihe besitzt eine geringere mittlere Dichte als Wasser.",
+    "aufgabe": "Was ist zu erwarten, wenn er ins Wasser gegeben wird?", "hilfe": "Ein Körper mit geringerer mittlerer Dichte als Wasser schwimmt normalerweise.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "schwimmt", "text": "Der Körper schwimmt." }, { "id": "sinkt", "text": "Der Körper sinkt sicher." },
+      { "id": "masselos", "text": "Der Körper wird masselos." }, { "id": "loest-sich", "text": "Der Körper löst sich immer auf." }
+    ],
+    "lösung": { "richtigeAntwort": "schwimmt", "begründung": "Bei geringerer mittlerer Dichte als Wasser schwimmt der Körper.", "erwartungshorizont": "Aus dem Dichtevergleich wird Schwimmen vorhergesagt." },
+    "thema": "Mechanik – Dichte und Auftrieb", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Schwimmen über einen Dichtevergleich vorhersagen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Dichte zur Erklärung verwenden" },
+    "kompetenztags": ["mechanik", "dichte", "auftrieb"], "diagnosetags": ["dichtevergleich"],
+    "fehlvorstellungen": [{ "id": "schwimmen-masselos", "beschreibung": "Schwimmende Körper werden als masselos angesehen." }],
+    "förderhinweise": ["Körper- und Wasserdichte mit einem Größer-kleiner-Zeichen vergleichen."]
+  },
+  {
+    "id": "follow-support-elektrolabor-messgeraete-08", "path": "support", "reihenfolge": 8,
+    "titel": "Messgeräte anschließen", "story": "Ein einfacher Stromkreis aus Batterie, Schalter und Lampe ist vorbereitet. Die möglichen Anschlusspunkte für beide Messgeräte sind markiert.",
+    "aufgabe": "Wähle beide richtigen Anschlüsse aus.", "hilfe": "Wartungshinweis: Das Amperemeter misst die Stromstärke in Ampere (A) und wird in Reihe geschaltet. Das Voltmeter misst die Spannung in Volt (V) und wird parallel geschaltet.",
+    "antworttyp": "multiple-choice", "antwortmöglichkeiten": [
+      { "id": "amperemeter-reihe", "text": "Amperemeter am markierten Anschlusspunkt in Reihe" },
+      { "id": "voltmeter-parallel", "text": "Voltmeter an den markierten Anschlusspunkten parallel zur Lampe" },
+      { "id": "amperemeter-parallel", "text": "Amperemeter parallel zur Lampe" },
+      { "id": "voltmeter-reihe", "text": "Voltmeter in Reihe" }
+    ],
+    "lösung": { "richtigeAntworten": ["amperemeter-reihe", "voltmeter-parallel"], "begründung": "Das Amperemeter wird in Reihe und das Voltmeter parallel zur Lampe geschaltet.", "erwartungshorizont": "Beide Messgeräte werden korrekt platziert." },
+    "thema": "Elektrizitätslehre – Messen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Amperemeter und Voltmeter sachgerecht anschließen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen sachgerecht messen" },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "spannung", "messgeraete"], "diagnosetags": ["messgeraete-anschluss"],
+    "fehlvorstellungen": [{ "id": "messgeraete-vertauscht", "beschreibung": "Reihen- und Parallelschaltung der Messgeräte werden vertauscht." }],
+    "förderhinweise": ["Messweg und Anschlusspunkte am Schaltbild markieren."], "wiederholenBisRichtig": true,
+    "fehlermeldung": "Das Messgerät ist noch nicht richtig angeschlossen. Prüft den Wartungshinweis."
+  },
+  {
+    "id": "follow-support-elektrolabor-zuordnung-09", "path": "support", "reihenfolge": 9,
+    "titel": "Größen und Einheiten", "story": "Die Messstation startet und zeigt Karten für Größen, Einheiten und Formelzeichen.",
+    "aufgabe": "Ordne jeder Größe ihr Formelzeichen und ihre Einheit zu.", "hilfe": "Bilde die drei Gruppen Stromstärke – I – Ampere (A), Spannung – U – Volt (V) und Widerstand – R – Ohm (Ω).",
+    "antworttyp": "zuordnung", "antwortmöglichkeiten": [
+      { "id": "stromstaerke", "text": "Stromstärke" }, { "id": "spannung", "text": "Spannung" }, { "id": "widerstand", "text": "Widerstand" },
+      { "id": "i", "text": "I" }, { "id": "u", "text": "U" }, { "id": "r", "text": "R" },
+      { "id": "ampere", "text": "Ampere (A)" }, { "id": "volt", "text": "Volt (V)" }, { "id": "ohm", "text": "Ohm (Ω)" }
+    ],
+    "zuordnungen": [
+      { "id": "i-begriff", "text": "I gehört zu ...", "antwortIds": ["stromstaerke", "spannung", "widerstand"], "richtigeAntwort": "stromstaerke" },
+      { "id": "u-begriff", "text": "U gehört zu ...", "antwortIds": ["stromstaerke", "spannung", "widerstand"], "richtigeAntwort": "spannung" },
+      { "id": "r-begriff", "text": "R gehört zu ...", "antwortIds": ["stromstaerke", "spannung", "widerstand"], "richtigeAntwort": "widerstand" },
+      { "id": "strom-einheit", "text": "Einheit der Stromstärke", "antwortIds": ["ampere", "volt", "ohm"], "richtigeAntwort": "ampere" },
+      { "id": "spannung-einheit", "text": "Einheit der Spannung", "antwortIds": ["ampere", "volt", "ohm"], "richtigeAntwort": "volt" },
+      { "id": "widerstand-einheit", "text": "Einheit des Widerstands", "antwortIds": ["ampere", "volt", "ohm"], "richtigeAntwort": "ohm" }
+    ],
+    "lösung": { "begründung": "Stromstärke wird in Ampere mit I, Spannung in Volt mit U und Widerstand in Ohm mit R angegeben.", "erwartungshorizont": "Alle Größen, Einheiten und Formelzeichen werden richtig zugeordnet." },
+    "thema": "Elektrizitätslehre – Grundgrößen", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Elektrische Größen ihren Einheiten und Formelzeichen zuordnen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen beschreiben und verwenden" },
+    "kompetenztags": ["elektrizitaet", "stromstaerke", "spannung", "widerstand"], "diagnosetags": ["groessen-einheiten-formelzeichen"],
+    "fehlvorstellungen": [{ "id": "einheiten-formelzeichen-vertauscht", "beschreibung": "Einheiten und Formelzeichen elektrischer Größen werden verwechselt." }],
+    "förderhinweise": ["Größe, Einheit und Formelzeichen als Dreiergruppen notieren."], "wiederholenBisRichtig": true,
+    "fehlermeldung": "Noch passen nicht alle Karten zusammen. Prüft jede Dreiergruppe noch einmal."
+  },
+  {
+    "id": "follow-support-elektrolabor-ohm-10", "path": "support", "reihenfolge": 10,
+    "titel": "Das Ohmsche Gesetz", "story": "Die Messstation benötigt einen Widerstandswert. Spannung: 6 Volt. Stromstärke: 0,3 Ampere. Gesucht: Widerstand. Auf dem Schaltplan stehen U = R · I, R = U / I und I = U / R.",
+    "aufgabe": "Wähle zuerst die benötigte Formel und danach das Ergebnis für R = 6 V / 0,3 A.", "hilfe": "Gesucht ist R. Die passende Umstellung ist bereits in der Formelsammlung enthalten.",
+    "antworttyp": "zuordnung", "antwortmöglichkeiten": [
+      { "id": "formel-u", "text": "U = R · I" }, { "id": "formel-r", "text": "R = U / I" }, { "id": "formel-i", "text": "I = U / R" },
+      { "id": "wert-20", "text": "20 Ω" }, { "id": "wert-2", "text": "2 Ω" }, { "id": "wert-18", "text": "1,8 Ω" }
+    ],
+    "zuordnungen": [
+      { "id": "formel", "text": "Benötigte Formel", "antwortIds": ["formel-u", "formel-r", "formel-i"], "richtigeAntwort": "formel-r" },
+      { "id": "ergebnis", "text": "R = 6 V / 0,3 A", "antwortIds": ["wert-20", "wert-2", "wert-18"], "richtigeAntwort": "wert-20" }
+    ],
+    "lösung": { "begründung": "R = U / I = 6 V / 0,3 A = 20 Ω.", "erwartungshorizont": "Die passende Umstellung wird gewählt und der Widerstand korrekt berechnet." },
+    "thema": "Elektrizitätslehre – Ohmsches Gesetz", "fach": "Physik", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Den Widerstand mit dem Ohmschen Gesetz berechnen.", "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Elektrische Größen quantitativ verknüpfen" },
+    "kompetenztags": ["elektrizitaet", "spannung", "stromstaerke", "widerstand"], "diagnosetags": ["ohmsches-gesetz"],
+    "fehlvorstellungen": [{ "id": "ohm-falsch-umgestellt", "beschreibung": "Das Ohmsche Gesetz wird nicht passend nach dem Widerstand umgestellt." }],
+    "förderhinweise": ["Die gesuchte Größe vor dem Einsetzen isolieren."], "wiederholenBisRichtig": true,
+    "fehlermeldung": "Der Widerstandswert stimmt noch nicht. Nutzt R = U / I."
+  }
+]

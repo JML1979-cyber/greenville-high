@@ -1,0 +1,154 @@
+{
+  "id": "greenville-high-school-ground-floor",
+  "title": "Greenville High School",
+  "subtitle": "Erinnerungsarchiv · Erdgeschoss",
+  "viewBox": "0 0 1200 600",
+  "mapSections": [
+    {
+      "id": "science-wing-a",
+      "label": "EG · NATURWISSENSCHAFTLICHER TRAKT · SEKTOR A",
+      "initiallyVisible": true,
+      "outline": "M 50 45 H 1150 V 555 H 50 Z",
+      "corridors": [
+        {
+          "id": "south-branch",
+          "geometry": { "x": 455, "y": 335, "width": 105, "height": 220 },
+          "label": "NEBENFLUR"
+        }
+      ],
+      "anonymousSpaces": [
+        { "id": "unknown-a04", "geometry": { "x": 50, "y": 335, "width": 205, "height": 220 }, "locked": false },
+        { "id": "unknown-a05", "geometry": { "x": 255, "y": 335, "width": 200, "height": 220 }, "locked": true },
+        { "id": "unknown-a06", "geometry": { "x": 840, "y": 335, "width": 155, "height": 220 }, "locked": false },
+        { "id": "unknown-a07", "geometry": { "x": 995, "y": 335, "width": 155, "height": 220 }, "locked": true }
+      ],
+      "doors": [
+        { "id": "door-unknown-a04", "x": 152, "y": 335, "side": "bottom", "locked": false },
+        { "id": "door-unknown-a05", "x": 355, "y": 335, "side": "bottom", "locked": true },
+        { "id": "door-unknown-a06", "x": 917, "y": 335, "side": "bottom", "locked": false },
+        { "id": "door-unknown-a07", "x": 1072, "y": 335, "side": "bottom", "locked": true }
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "laser-labor",
+      "name": "Laserlabor",
+      "shortName": "Laserlabor",
+      "icon": "laser",
+      "description": "Mr. Lasers abgeschirmter Startraum.",
+      "geometry": { "x": 50, "y": 45, "width": 275, "height": 185 },
+      "initialState": "entdeckt"
+    },
+    {
+      "id": "unknown-a01",
+      "name": "Mechaniklabor",
+      "shortName": "Mechaniklabor",
+      "icon": "room",
+      "description": "Ein Mess- und Experimentierraum für Kraft und Bewegung.",
+      "geometry": { "x": 325, "y": 45, "width": 175, "height": 185 },
+      "initialState": "unbekannt"
+    },
+    {
+      "id": "transferkorridor",
+      "name": "Flur",
+      "shortName": "Flur",
+      "icon": "route",
+      "description": "Die zentrale Verbindung zwischen den Fachbereichen.",
+      "geometry": { "x": 50, "y": 230, "width": 1100, "height": 105 },
+      "initialState": "entdeckt"
+    },
+    {
+      "id": "energielabor",
+      "name": "Energielabor",
+      "shortName": "Energielabor",
+      "icon": "energy",
+      "description": "Ein Labor für Energieumwandlungen und elektrische Messungen.",
+      "geometry": { "x": 500, "y": 45, "width": 280, "height": 185 },
+      "initialState": "unbekannt"
+    },
+    {
+      "id": "unknown-a02",
+      "name": "Elektrolabor",
+      "shortName": "Elektrolabor",
+      "icon": "energy",
+      "description": "Ein Labor für elektrische Messungen und Schaltungen.",
+      "geometry": { "x": 780, "y": 45, "width": 170, "height": 185 },
+      "initialState": "verschlossen"
+    },
+    {
+      "id": "unknown-a03",
+      "name": "Chemielabor",
+      "shortName": "Chemielabor",
+      "icon": "room",
+      "description": "Ein Labor für Stoffuntersuchungen und Vergleichsversuche.",
+      "geometry": { "x": 950, "y": 45, "width": 200, "height": 185 },
+      "initialState": "unbekannt"
+    },
+    {
+      "id": "optiklabor",
+      "name": "Optiklabor",
+      "shortName": "Optiklabor",
+      "icon": "optics",
+      "description": "Ein verdunkelter Raum für optische Untersuchungen.",
+      "geometry": { "x": 560, "y": 335, "width": 280, "height": 220 },
+      "initialState": "verschlossen"
+    }
+  ],
+  "connections": [
+    {
+      "id": "laser-transfer",
+      "from": "laser-labor",
+      "to": "transferkorridor",
+      "path": "M 187 230 L 187 230",
+      "initialState": "sichtbar"
+    },
+    {
+      "id": "transfer-mechanics",
+      "from": "transferkorridor",
+      "to": "unknown-a01",
+      "path": "M 412 230 L 412 230",
+      "initialState": "verborgen"
+    },
+    {
+      "id": "transfer-energy",
+      "from": "transferkorridor",
+      "to": "energielabor",
+      "path": "M 640 230 L 640 230",
+      "initialState": "verborgen"
+    },
+    {
+      "id": "transfer-electro",
+      "from": "transferkorridor",
+      "to": "unknown-a02",
+      "path": "M 865 230 L 865 230",
+      "initialState": "verborgen"
+    },
+    {
+      "id": "transfer-chemistry",
+      "from": "transferkorridor",
+      "to": "unknown-a03",
+      "path": "M 1050 230 L 1050 230",
+      "initialState": "verborgen"
+    },
+    {
+      "id": "transfer-optics",
+      "from": "transferkorridor",
+      "to": "optiklabor",
+      "path": "M 700 335 L 700 335",
+      "initialState": "verborgen"
+    }
+  ],
+  "doors": [
+    { "id": "door-laser-transfer", "connection": "laser-transfer", "x": 187, "y": 230, "side": "top" },
+    { "id": "door-transfer-mechanics", "connection": "transfer-mechanics", "x": 412, "y": 230, "side": "top" },
+    { "id": "door-transfer-energy", "connection": "transfer-energy", "x": 640, "y": 230, "side": "top" },
+    { "id": "door-unknown-a02", "connection": "transfer-electro", "x": 865, "y": 230, "side": "top" },
+    { "id": "door-unknown-a03", "connection": "transfer-chemistry", "x": 1050, "y": 230, "side": "top" },
+    { "id": "door-transfer-optics", "connection": "transfer-optics", "x": 700, "y": 335, "side": "bottom" }
+  ],
+  "initialState": {
+    "currentRoom": "transferkorridor",
+    "mrLaserRoom": "transferkorridor"
+  }
+}

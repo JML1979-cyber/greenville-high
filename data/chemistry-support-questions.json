@@ -1,0 +1,86 @@
+[
+  {
+    "id": "chem-support-aggregatzustaende-01", "path": "support", "reihenfolge": 1,
+    "titel": "Referenzprobe Wasser", "story": "Auf dem Labortisch stehen drei geschlossene Wasserproben. Die Station protokolliert Form, Fließfähigkeit und Verteilung im Gefäß.",
+    "aufgabe": "Ordne jeder Wasserprobe ihren Aggregatzustand zu.",
+    "hilfe": "Orientierung: Eis ist fest, Wasser im Becherglas ist flüssig und Wasser als Gas ist gasförmig. Diese Information bleibt während der Zuordnung sichtbar.",
+    "antworttyp": "zuordnung", "antwortmöglichkeiten": [
+      { "id": "fest", "text": "fest" }, { "id": "fluessig", "text": "flüssig" }, { "id": "gasfoermig", "text": "gasförmig" }
+    ],
+    "zuordnungen": [
+      { "id": "eis", "text": "Eiswürfel", "richtigeAntwort": "fest" },
+      { "id": "wasser", "text": "Wasser im Becherglas", "richtigeAntwort": "fluessig" },
+      { "id": "wassergas", "text": "Wasser als Gas im geschlossenen Gefäß", "richtigeAntwort": "gasfoermig" }
+    ],
+    "lösung": { "begründung": "Wasser kann unter normalen Laborbedingungen fest, flüssig oder gasförmig vorliegen.", "erwartungshorizont": "Alle drei Wasserproben werden korrekt zugeordnet." },
+    "thema": "Thermodynamik – Aggregatzustände", "fach": "Chemie", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Die Aggregatzustände fest, flüssig und gasförmig am Referenzstoff Wasser unterscheiden.",
+    "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Aggregatzustände beschreiben und unterscheiden" },
+    "kompetenztags": ["aggregatzustaende", "stoff-teilchen-beziehungen"], "diagnosetags": ["aggregatzustaende"],
+    "fehlvorstellungen": [{ "id": "gas-kein-stoff", "beschreibung": "Der gasförmige Zustand wird nicht als Stoffzustand erkannt." }],
+    "förderhinweise": ["Wasser als durchgehendes Beispiel in allen drei Zuständen verwenden."],
+    "wiederholenBisRichtig": true, "fehlermeldung": "Noch nicht alle Wasserproben sind richtig zugeordnet. Nutzt die sichtbare Orientierung."
+  },
+  {
+    "id": "chem-support-phasenuebergaenge-02", "path": "support", "reihenfolge": 2,
+    "titel": "Übergänge des Wassers", "story": "Die Referenzstation protokolliert vier Zustandsänderungen der Wasserprobe, aber die Bezeichnungen fehlen.",
+    "aufgabe": "Ordne jedem Übergang den passenden Fachbegriff zu.",
+    "hilfe": "Übersicht: fest → flüssig: Schmelzen; flüssig → gasförmig: Verdampfen/Sieden; gasförmig → flüssig: Kondensieren; flüssig → fest: Erstarren/Gefrieren.",
+    "antworttyp": "zuordnung", "antwortmöglichkeiten": [
+      { "id": "schmelzen", "text": "Schmelzen" }, { "id": "verdampfen", "text": "Verdampfen/Sieden" },
+      { "id": "kondensieren", "text": "Kondensieren" }, { "id": "erstarren", "text": "Erstarren/Gefrieren" }
+    ],
+    "zuordnungen": [
+      { "id": "fest-fluessig", "text": "fest → flüssig", "richtigeAntwort": "schmelzen" },
+      { "id": "fluessig-gas", "text": "flüssig → gasförmig", "richtigeAntwort": "verdampfen" },
+      { "id": "gas-fluessig", "text": "gasförmig → flüssig", "richtigeAntwort": "kondensieren" },
+      { "id": "fluessig-fest", "text": "flüssig → fest", "richtigeAntwort": "erstarren" }
+    ],
+    "lösung": { "begründung": "Die vier Übergänge werden mit den angegebenen Fachbegriffen bezeichnet.", "erwartungshorizont": "Alle Übergänge werden fachsprachlich richtig zugeordnet." },
+    "thema": "Thermodynamik – Phasenübergänge", "fach": "Chemie", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Phasenübergänge von Wasser fachsprachlich benennen.",
+    "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Aggregatzustandsänderungen beschreiben und fachsprachlich benennen" },
+    "kompetenztags": ["aggregatzustaende", "phasenuebergaenge"], "diagnosetags": ["phasenuebergaenge"],
+    "fehlvorstellungen": [{ "id": "uebergaenge-vertauscht", "beschreibung": "Hin- und Rückübergänge werden verwechselt." }],
+    "förderhinweise": ["Ausgangs- und Endzustand jeweils vor dem Fachbegriff lesen."],
+    "wiederholenBisRichtig": true, "fehlermeldung": "Mindestens ein Übergang ist noch vertauscht. Vergleicht Ausgangs- und Endzustand mit der Übersicht."
+  },
+  {
+    "id": "chem-support-probe-m02b-03", "path": "support", "reihenfolge": 3,
+    "titel": "Probe M-02/B", "story": "Bei derselben protokollierten Abkühlung auf 5 °C bleibt Wasser flüssig. Die unbekannte Probe M-02/B wird kurz formstabil und fließt anschließend wieder; der Sensor zeigt dabei weiterhin 5 °C.",
+    "aufgabe": "Welche Beschreibung trennt Beobachtung und Deutung korrekt?", "hilfe": "Vergleicht nur das beobachtete Verhalten beider Proben. Eine Ursache wurde noch nicht untersucht.",
+    "antworttyp": "single-choice", "antwortmöglichkeiten": [
+      { "id": "beobachtung-offen", "text": "Unter diesen Versuchsbedingungen verhält sich M-02/B anders als Wasser; die Temperaturänderung allein erklärt die Beobachtung nicht." },
+      { "id": "fester-punkt", "text": "M-02/B besitzt grundsätzlich einen festen Erstarrungspunkt von 5 °C." },
+      { "id": "sensor-defekt", "text": "Die Beobachtung beweist, dass der Temperatursensor defekt ist." },
+      { "id": "naturgesetz", "text": "Die Beobachtung beweist, dass für M-02/B keine Naturgesetze gelten." }
+    ],
+    "lösung": { "richtigeAntwort": "beobachtung-offen", "begründung": "Die Aussage bleibt auf die konkreten Bedingungen und die tatsächlich beobachtete Abweichung beschränkt.", "erwartungshorizont": "Beobachtung und noch offene Ursache werden getrennt." },
+    "thema": "Erkenntnisgewinnung – Stoffverhalten", "fach": "Chemie", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Eine ungewöhnliche Beobachtung vorsichtig und ohne unbelegte Verallgemeinerung beschreiben.",
+    "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Beobachtungen beschreiben und von Deutungen unterscheiden" },
+    "kompetenztags": ["aggregatzustaende", "erkenntnisgewinnung"], "diagnosetags": ["beobachtung-deutung"],
+    "fehlvorstellungen": [{ "id": "einzelbeobachtung-allgemeines-gesetz", "beschreibung": "Eine Einzelbeobachtung wird unzulässig verallgemeinert." }],
+    "förderhinweise": ["Nur Aussagen auswählen, die durch den beschriebenen Versuch gedeckt sind."],
+    "wiederholenBisRichtig": true, "fehlermeldung": "Diese Aussage geht über die Beobachtung hinaus. Bleibt bei den Bedingungen dieses Versuchs."
+  },
+  {
+    "id": "chem-support-schlussfolgerung-04", "path": "support", "reihenfolge": 4,
+    "titel": "Vorsichtige Schlussfolgerung", "story": "Mr. Laser wiederholt die Messung mit Wasser. Die Wasserprobe verhält sich erwartungsgemäß; ein offensichtlicher allgemeiner Messfehler wird dadurch weniger wahrscheinlich.",
+    "aufgabe": "Wähle alle wissenschaftlich zulässigen Schlussfolgerungen aus.", "hilfe": "Eine wissenschaftliche Schlussfolgerung nennt, was beobachtet wurde, und lässt ungeklärte Ursache und Herkunft offen.",
+    "antworttyp": "multiple-choice", "antwortmöglichkeiten": [
+      { "id": "ausserirdisch", "text": "Die Probe stammt eindeutig von Außerirdischen." },
+      { "id": "keine-naturgesetze", "text": "Die bekannten Naturgesetze gelten nicht mehr." },
+      { "id": "ungewoehnlich-offen", "text": "Die Probe zeigt unter den untersuchten Bedingungen ungewöhnliche Eigenschaften. Ursache und Herkunft müssen weiter untersucht werden." },
+      { "id": "unerwartet-falsch", "text": "Der Versuch muss falsch sein, weil das Ergebnis unerwartet ist." }
+    ],
+    "lösung": { "richtigeAntworten": ["ungewoehnlich-offen"], "begründung": "Nur diese Aussage bleibt bei der gesicherten Beobachtung und kennzeichnet Ursache und Herkunft als offen.", "erwartungshorizont": "Es wird ausschließlich die vorsichtige, evidenzbezogene Schlussfolgerung gewählt." },
+    "thema": "Erkenntnisgewinnung – Schlussfolgern", "fach": "Chemie", "jahrgang": 9, "schwierigkeitsgrad": 1,
+    "lernziel": "Aus Beobachtung und Kontrollversuch eine begrenzte wissenschaftliche Schlussfolgerung ableiten.",
+    "kc_referenz": { "quelle": "KC IGS Naturwissenschaften Niedersachsen 2020", "kompetenz": "Untersuchungsergebnisse auswerten und Schlussfolgerungen begründen" },
+    "kompetenztags": ["erkenntnisgewinnung", "bewertung"], "diagnosetags": ["wissenschaftliches-schlussfolgern"],
+    "fehlvorstellungen": [{ "id": "sensationelle-erklaerung", "beschreibung": "Eine spektakuläre Ursache wird ohne Evidenz als bewiesen angesehen." }],
+    "förderhinweise": ["Gesicherte Aussage und offene Fragen getrennt markieren."],
+    "wiederholenBisRichtig": true, "fehlermeldung": "Diese Folgerung ist durch die bisherigen Beobachtungen nicht belegt. Ursache und Herkunft sind noch offen."
+  }
+]

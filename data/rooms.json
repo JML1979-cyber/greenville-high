@@ -1,0 +1,10 @@
+[
+  {
+    "id": "laser-labor",
+    "name": "Laserlabor",
+    "beschreibung": "Ein abgeschirmter Forschungsraum für optische Untersuchungen.",
+    "typ": "forschungsbereich",
+    "hintergrund": "assets/background.jpg",
+    "aufgaben": ["platzhalter-aufgabe-01"]
+  }
+]
