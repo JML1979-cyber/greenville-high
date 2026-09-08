@@ -14,10 +14,14 @@ const FOLLOW_UP_PHASE_SCREENS = new Set([
 
 const ELECTRO_SCREENS = new Set(["electro-transition", "electro-questions", "electro-complete"]);
 const CHEMISTRY_SCREENS = new Set(["chemistry-transition", "chemistry-questions", "chemistry-complete"]);
+const LASER_REVEAL_SCREENS = new Set([
+  "entry-transition", "mechanics-transition", "evaluation", "entry-feedback", "entry-ready"
+]);
 
 /**
  * Keeps story navigation separate from map progression. Entry assessment
- * screens always use the pristine corridor state. Follow-up movement must be
+ * screens keep both markers in the corridor; the M-02 hint reveals only the
+ * laser lab. Follow-up movement must be
  * triggered explicitly through enterRoom()/completeRoom() by future story
  * events; task metadata alone never mutates the map.
  */
@@ -35,6 +39,7 @@ export class MapPhaseController {
       this.phase = "follow-up";
       this.restoreStoryProgress(screen);
     }
+    this.updateLaserLabVisibility(screen);
   }
 
   restoreForScreen(screen, savedState) {
@@ -46,6 +51,19 @@ export class MapPhaseController {
       this.phase = "follow-up";
       this.restoreStoryProgress(screen);
     }
+    this.updateLaserLabVisibility(screen);
+  }
+
+  updateLaserLabVisibility(screen) {
+    if (!ENTRY_PHASE_SCREENS.has(screen) && !FOLLOW_UP_PHASE_SCREENS.has(screen)) return;
+    const state = this.schoolMap.exportState();
+    const revealed = LASER_REVEAL_SCREENS.has(screen) || FOLLOW_UP_PHASE_SCREENS.has(screen);
+    const previous = state.rooms["laser-labor"];
+    const next = revealed ? (previous === "abgeschlossen" ? previous : "entdeckt") : "unbekannt";
+    if (previous === next) return;
+    // Correct legacy entry saves without changing any other room, path or marker.
+    state.rooms["laser-labor"] = next;
+    this.schoolMap.importState(state);
   }
 
   enterRoom(roomId, { moveMrLaser = false } = {}) {

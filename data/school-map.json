@@ -38,7 +38,7 @@
       "icon": "laser",
       "description": "Mr. Lasers abgeschirmter Startraum.",
       "geometry": { "x": 50, "y": 45, "width": 275, "height": 185 },
-      "initialState": "entdeckt"
+      "initialState": "unbekannt"
     },
     {
       "id": "unknown-a01",

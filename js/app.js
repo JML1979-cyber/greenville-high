@@ -32,9 +32,11 @@ async function loadData() {
   return Object.fromEntries(entries);
 }
 
+const intro = new CinematicStart(root);
 try {
-  await new CinematicStart(root).play();
+  await intro.play();
   const data = await loadData();
+  intro.holdForGame();
   root.innerHTML = `
     <section id="school-map" class="school-map" aria-label="Greenville-Schulkarte"></section>
     <section id="screen-root" class="screen-root" aria-live="polite"></section>`;
@@ -128,7 +130,9 @@ try {
     const feedback = screenRoot.querySelector("#storage-feedback");
     if (feedback) feedback.textContent = storageError.message;
   }
+  await intro.revealGame();
 } catch (error) {
   root.innerHTML = `<section class="screen-panel error-panel"><p class="eyebrow">Greenville High School</p><h1>Die Erkundung kann gerade nicht beginnen</h1><p>${error.message}</p><p>Bitte öffne die Anwendung über den vorgesehenen lokalen Start.</p></section>`;
   console.error(error);
+  await intro.revealGame();
 }
